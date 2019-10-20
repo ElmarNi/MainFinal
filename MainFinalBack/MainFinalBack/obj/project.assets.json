@@ -12648,11 +12648,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\MainFinalBack\\MainFinalBack\\MainFinalBack.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\final\\MF\\MainFinalBack\\MainFinalBack\\MainFinalBack.csproj",
       "projectName": "MainFinalBack",
-      "projectPath": "C:\\Users\\User\\Desktop\\MainFinalBack\\MainFinalBack\\MainFinalBack.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\final\\MF\\MainFinalBack\\MainFinalBack\\MainFinalBack.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\MainFinalBack\\MainFinalBack\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\final\\MF\\MainFinalBack\\MainFinalBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
