@@ -1,0 +1,51 @@
+﻿@model LoadCountriesAdminVM
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Countries</li>
+    </ol>
+</nav>
+<div class="row" id="Countries">
+    <input type="hidden" id="takenCountries" value="@Model.Countries.Count()" />
+    <input type="hidden" id="count" value="@ViewBag.Countries" />
+    <div class="col-12">
+        <div class="table-responsive">
+            <table class="table w-100">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var c in Model.Countries)
+                    {
+                        <tr>
+                            <td>@c.Name</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@c.Id" style="float:right">
+                                    <i class="fas fa-pen-square" style="font-size:40px"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @if (ViewBag.Countries > Model.Countries.Count())
+            {
+                <a class="btn btn-block btn-info my-3" href="" id="loadCountries">Load More</a>
+            }
+        </div>
+        <form method="post" class="w-100">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group col-12 p-0">
+                <label>Country:</label>
+                <input class="form-control" asp-for="Country.Name" />
+                <span asp-validation-for="Country.Name" class="text-danger"></span>
+            </div>
+            <input type="submit" class="btn btn-block btn-success" value="Add" />
+        </form>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

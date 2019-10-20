@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Order>
+
+
+<style>
+    table div:not(.delete-buttons) {
+        display: none !important;
+    }
+    img{
+        max-width:unset
+    }
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">User</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Orders</li>
+    </ol>
+</nav>
+<div class="container" id="orders">
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Order date</th>
+                    <th>Response date</th>
+                    <th>Pick up date</th>
+                    <th>Return date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var o in Model)
+                {
+                <tr>
+                    <td>
+                        <img src="~/img/@o.Advertisement.Car.MainImageUrl" style="width: 200px; object-fit:cover" />
+                    </td>
+                    <td>@o.Firstname</td>
+                    <td>@o.Lastname</td>
+                    <td>@o.Email</td>
+                    <td>@o.OrderDate.Day/@o.OrderDate.Month/@o.OrderDate.Year</td>
+                    <td>@o.ResponseDate.Day/@o.ResponseDate.Month/@o.ResponseDate.Year</td>
+                    <td>@o.PickDate.Day/@o.PickDate.Month/@o.PickDate.Year</td>
+                    <td>@o.ReturnDate.Day/@o.ReturnDate.Month/@o.ReturnDate.Year</td>
+                    <td>
+                        <a class="btn btn-block btn-info" asp-area="" asp-controller="Cars" asp-action="Details" asp-route-id="@o.AdvertisementId">Ad details</a>
+                        <a class="btn btn-block btn-warning my-2" href="" id="accept">Accept?</a>
+                        <div class="delete-buttons justify-content-between mt-2 d-none">
+                            <a class="btn btn-danger mr-1 text-center w-50" asp-action="confirm" asp-route-id="@o.Id">
+                                <i class="tim-icons icon-check-2"></i>
+                            </a>
+                            <a class="btn btn-warning ml-1 text-center w-50" asp-action="reject" asp-route-id="@o.Id">
+                                <i class="tim-icons icon-simple-remove"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

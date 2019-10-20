@@ -1,0 +1,56 @@
+﻿@model AboutUsVM
+<section id="sub-banner" style="background-image: url(img/@ViewBag.Banner)">
+    <div class="sub-banner">
+        <div class="breadcrumb-areas">
+            <h1>About Us</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">About Us</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- our vision -->
+<section id="vision">
+    <div class="container">
+        <div class="row heading-row justify-content-center">
+            <h2 class="section-title">
+                our vision
+            </h2>
+        </div>
+        <div class="row body-row">
+            @foreach (var vision in Model.OurVisions)
+            {
+                <div class="col-sm-6 col-lg-3 d-flex mb-3">
+                    <div class="dot mr-3"></div>
+                    <div class="content">
+                        <h5 style="word-break:break-word">@vision.Header</h5>
+                        <p style="word-break:break-word">@vision.Content</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- passion -->
+<section id="passion" style="background-image: url(img/@Model.OurPassions.SectionBannerImage)">
+    <div class="overlay"></div>
+    <div class="container position-relative">
+        <div class="row">
+            <div class="col-md-5 mb-4 pb-2">
+                <img src="img/@Model.OurPassions.ImageUrl">
+            </div>
+            <div class="col-md-7">
+                <h5 style="word-break:break-word">
+                    <span>@Model.OurPassions.SmallHeader</span>
+                    @Model.OurPassions.MainHeader
+                </h5>
+                <p style="word-break:break-word">
+                    @Model.OurPassions.Content
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

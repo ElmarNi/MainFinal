@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Country>
+@foreach (var c in Model)
+{
+    <tr>
+        <td>@c.Name</td>
+        <td>
+            <a asp-area="admin" asp-controller="Countries" asp-action="Edit" asp-route-id="@c.Id" style="float:right">
+                <i class="fas fa-pen-square" style="font-size:40px"></i>
+            </a>
+        </td>
+    </tr>
+}

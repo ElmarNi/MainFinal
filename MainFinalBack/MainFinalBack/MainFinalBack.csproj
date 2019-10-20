@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190916134825_Initial.cs" />
+    <Compile Remove="Migrations\20190916134825_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20190916140038_Initial.cs" />
+    <Compile Remove="Migrations\20190916140038_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20191009211607_Added chat.cs" />
+    <Compile Remove="Migrations\20191009211607_Added chat.Designer.cs" />
+    <Compile Remove="Migrations\20191014131824_Term added.cs" />
+    <Compile Remove="Migrations\20191014131824_Term added.Designer.cs" />
+    <Compile Remove="Migrations\20191014132030_term added local.cs" />
+    <Compile Remove="Migrations\20191014132030_term added local.Designer.cs" />
+    <Compile Remove="Migrations\20191014132109_term added.cs" />
+    <Compile Remove="Migrations\20191014132109_term added.Designer.cs" />
+    <Compile Remove="Migrations\20191016141049_Added our passion about us.cs" />
+    <Compile Remove="Migrations\20191016141049_Added our passion about us.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\js\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\js\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\js\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\js\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\js\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\js\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\User\assets\css\black-dashboard.css.map" />
+    <None Include="wwwroot\User\assets\demo\demo.js" />
+    <None Include="wwwroot\User\assets\fonts\nucleo.woff2" />
+    <None Include="wwwroot\User\assets\js\black-dashboard.js" />
+    <None Include="wwwroot\User\assets\js\black-dashboard.js.map" />
+    <None Include="wwwroot\User\assets\js\black-dashboard.min.js" />
+    <None Include="wwwroot\User\assets\js\core\bootstrap.min.js" />
+    <None Include="wwwroot\User\assets\js\core\jquery.min.js" />
+    <None Include="wwwroot\User\assets\js\core\popper.min.js" />
+    <None Include="wwwroot\User\assets\js\plugins\bootstrap-notify.js" />
+    <None Include="wwwroot\User\assets\js\plugins\chartjs.min.js" />
+    <None Include="wwwroot\User\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="4.0.40804" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Moderator\Data\" />
+    <Folder Include="Areas\Moderator\Models\" />
+    <Folder Include="Areas\User\Data\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="wwwroot\img\advertisements\" />
+    <Folder Include="wwwroot\img\blogs\" />
+    <Folder Include="wwwroot\img\AboutUs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Areas\Admin\Views\Dashboard\Index.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\Shared\ErrorPage.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\Shared\_Layout.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\_ViewImports.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Admin\Views\_ViewStart.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Moderator\Views\Shared\ErrorPage.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Moderator\Views\Shared\_Layout.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Moderator\Views\Shared\_ValidationScriptsPartial.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Moderator\Views\_ViewImports.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="Areas\Moderator\Views\_ViewStart.cshtml">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\img\reservation-banner.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

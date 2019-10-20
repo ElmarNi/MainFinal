@@ -1,0 +1,32 @@
+﻿@model City
+<style>
+    option{
+        color:black;
+    }
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">Admin</a></li>
+        <li class="breadcrumb-item"><a asp-action="Index">Cities</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+</nav>
+<form method="post" class="w-100 d-flex flex-wrap">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group col-6">
+        <label>Country:</label>
+        <select class="form-control" asp-items="@(new SelectList(ViewBag.Countries, "Id", "Name"))" asp-for="CountryId">
+            <option class=" text-dark" value="">Select Country</option>
+        </select>
+        <span asp-validation-for="CountryId" class="text-danger"></span>
+    </div>
+    <div class="form-group col-6">
+        <label>City:</label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <input type="submit" class="mx-3 btn btn-block btn-success" value="Update" />
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

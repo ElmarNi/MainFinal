@@ -1,0 +1,65 @@
+﻿@model ContactModeratorVM
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact messages</li>
+        </ol>
+    </nav>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model.Contacts)
+                {
+                    <tr>
+                        <td>@c.Name</td>
+                        <td>@c.Email</td>
+                        <td>@c.Message</td>
+                        <td>@c.Date.ToString("MMMM dd, yyyy")</td>
+                        <td>
+                            <button type="button" class="btn btn-info btn-lg btn-block m-0 ml-2 px-3 py-2" data-toggle="modal" data-target="#myModal">
+                                Reply
+                            </button>
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Message</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form method="post" asp-route-id="@c.Id">
+                                                <div class="form-group">
+                                                    <label>Message</label>
+                                                    <input class="form-control text-dark" asp-for="Message" />
+                                                    <span asp-validation-for="Message" class="text-danger"></span>
+                                                </div>
+                                                <input type="submit" class="btn btn-block btn-success" value="Send" />
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

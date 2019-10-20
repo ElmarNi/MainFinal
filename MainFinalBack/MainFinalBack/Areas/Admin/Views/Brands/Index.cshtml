@@ -1,0 +1,49 @@
+﻿@model LoadBrandsAdminVM
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Brands</li>
+    </ol>
+</nav>
+<div class="row" id="Brands">
+    <input type="hidden" id="takenBrands" value="@Model.Brands.Count()" />
+    <input type="hidden" id="count" value="@ViewBag.Brands" />
+    <div class="col-12 table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var brand in Model.Brands)
+                {
+                    <tr>
+                        <td>@brand.Name</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@brand.Id" style="float:right">
+                                <i class="fas fa-pen-square" style="font-size:40px"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @if (ViewBag.Brands > Model.Brands.Count())
+        {
+            <a class="btn btn-block btn-info my-3" href="" id="loadBrands">Load More</a>
+        }
+        <form method="post" class="w-100">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group col-12 p-0">
+                <label>Brand:</label>
+                <input class="form-control" asp-for="Brand.Name" />
+                <span asp-validation-for="Brand.Name" class="text-danger"></span>
+            </div>
+            <input type="submit" class="btn btn-block btn-success" value="Add" />
+        </form>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

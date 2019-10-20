@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Blog>
+
+
+<style>
+    table div:not(.delete-buttons) {
+        display: none !important;
+    }
+
+    table img {
+        width: 150px !important;
+        max-width: unset;
+    }
+</style>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Blogs</li>
+        </ol>
+    </nav>
+    <a class="btn btn-primary btn-block my-3" asp-action="Create">Create</a>
+    <div class="table-responsive">
+        <table class="table" id="blogs">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Header</th>
+                    <th>Published date</th>
+                    <th>Updated date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var blog in Model)
+                {
+                    <tr>
+                        <td><img src="~/img/@blog.MainImageUrl" /></td>
+                        <td>@blog.Header</td>
+                        <td>@blog.PublishDate.Day/@blog.PublishDate.Month/@blog.PublishDate.Year</td>
+                        <td>@blog.UpdatedDate.Day/@blog.UpdatedDate.Month/@blog.UpdatedDate.Year</td>
+                        <td>
+                            <a class="btn btn-info btn-block text-center" style="width:200px" asp-area="" asp-controller="Blog" asp-action="Details" asp-route-id="@blog.Id">Details</a>
+                            <a class="btn btn-warning my-2 btn-block text-center" style="width:200px" asp-action="Edit" asp-route-id="@blog.Id">Edit</a>
+                            <a class="btn btn-danger btn-block text-center" href="" style="width:200px" id="delete">Delete</a>
+                            <div class="delete-buttons justify-content-between mt-2 d-none">
+                                <a class="btn btn-danger mr-1 text-center" asp-action="Delete" asp-route-id="@blog.Id">
+                                    <i class="tim-icons icon-check-2"></i>
+                                </a>
+                                <a class="btn btn-warning ml-1 text-center" href="" id="cancel">
+                                    <i class="tim-icons icon-simple-remove"></i>
+                                </a>
+                            </div>
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

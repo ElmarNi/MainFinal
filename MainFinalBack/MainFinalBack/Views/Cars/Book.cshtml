@@ -1,0 +1,69 @@
+﻿@model BookVM
+
+<section id="sub-banner" style="background-image: url(/img/@ViewBag.Banner)">
+    <div class="sub-banner">
+        <div class="breadcrumb-areas">
+            <h1>Car Details</h1>
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a asp-action="index">Cars</a></li>
+                <li class="active">@Model.Advertisement.Car.Model.Brand.Name @Model.Advertisement.Car.Model.Name</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="reservation">
+    <input type="hidden" id="AdPrice" value="@ViewBag.Price" />
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="section-title">
+                    RESERVE YOUR VEHICLE
+                </h2>
+            </div>
+            <div class="col-12 reservation-form">
+                <form method="post" enctype="multipart/form-data" class="d-lg-flex w-100 flex-wrap">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group col-lg-6">
+                        <label>Pick-Up date <span>*</span></label>
+                        <input asp-for="Order.PickDate" class="form-control">
+                        <span class="text-danger" asp-validation-for="Order.PickDate"></span>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Return date <span>*</span></label>
+                        <input asp-for="Order.ReturnDate" class="form-control">
+                        <span class="text-danger" asp-validation-for="Order.ReturnDate"></span>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>First name <span>*</span></label>
+                        <input asp-for="Order.Firstname" class="form-control" placeholder="First Name">
+                        <span class="text-danger" asp-validation-for="Order.Firstname"></span>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Last name</label>
+                        <input asp-for="Order.Lastname" class="form-control" placeholder="Last Name">
+                        <span class="text-danger" asp-validation-for="Order.Lastname"></span>
+                    </div>
+                    <div class="form-group col-12">
+                        <label>Email <span>*</span></label>
+                        <input asp-for="Order.Email" class="form-control" placeholder="Email">
+                        <span class="text-danger" asp-validation-for="Order.Email"></span>
+                    </div>
+                    <div class="buttons w-100 px-3">
+                        <input class="btn btn-lg custom-bg-green-btn" type="submit" value="Book" />
+                        <a href="" class="btn btn-lg btn-info reserve" style="float:right; font-size:18px;font-weight:bold">Cost</a>
+                        <div class="alert alert-warning alert-dismissible fade show text-left p-3 m-0 mt-3 d-none" id="alert" role="alert">
+                            Your order's cost: <strong class="price"> $</strong>, Are you sure?
+                            <button type="button" class="ml-3 cancel">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

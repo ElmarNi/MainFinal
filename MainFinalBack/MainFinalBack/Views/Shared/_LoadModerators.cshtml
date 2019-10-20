@@ -1,0 +1,37 @@
+﻿@model IList<ApplicationUser>
+
+@{
+    Layout = null;
+}
+
+<tbody>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.Firstname</td>
+            <td>@u.Lastname</td>
+            <td>@u.Email</td>
+            <td>@u.UserName</td>
+            <td>
+                @if (u.IsBlocked)
+                {
+                    <p style="margin:0">Yes</p>
+                }
+                else
+                {
+                    <p style="margin:0">No</p>
+                }
+            </td>
+            <td>
+                @if (u.IsBlocked)
+                {
+                    <a href="" class="btn btn-info btn-block" id="un-block" data-id="@u.Id">Unblock</a>
+                }
+                else
+                {
+                    <a href="" class="btn btn-danger btn-block" id="block" data-id="@u.Id">Block</a>
+                }
+            </td>
+        </tr>
+    }
+</tbody>

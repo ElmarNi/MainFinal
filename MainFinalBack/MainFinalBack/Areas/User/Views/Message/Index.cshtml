@@ -1,0 +1,41 @@
+﻿@model MessageUserVM
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="index">User</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Messages</li>
+    </ol>
+</nav>
+<div class="container" id="messages">
+    @foreach (var m in Model.AdvertisementMessage)
+    {
+        <div class="col-12 d-flex flex-wrap flex-xl-nowrap p-3 mb-3 position-relative" style="border: 1px dashed;background: #1d253b;">
+            <span class="date position-absolute" style="right:0.7%;top:0; z-index:1; font-size:12px">@m.Message.Date.Day, @m.Message.Date.ToString("MMM"), @m.Message.Date.Year</span>
+
+            <div class="left mr-xl-2 col-12 col-xl-4 mb-2 mb-xl-0 mt-2 mt-xl-0">
+                <img src="~/img/@m.Advertisement.Car.MainImageUrl" style="width:100%; height:205px;object-fit:cover" />
+            </div>
+            <div class="right ml-xl-2 col-12 col-xl-8">
+                <h4 class="text-center text-info">@m.Message.Title</h4>
+                <p style="word-break:break-word" class="my-2 my-xl-0">@m.Message.Body</p>
+                <a class="btn btn-block btn-info" asp-area="" asp-controller="Cars" asp-action="Details" asp-route-id="@m.AdvertisementId">Details</a>
+                <a class="btn btn-block btn-warning" asp-area="User" asp-controller="Advertisement" asp-action="Edit" asp-route-id="@m.AdvertisementId">Edit</a>
+                <a class="btn btn-block btn-danger" asp-action="Delete" asp-route-id="@m.Id">Delete message</a>
+            </div>
+        </div>
+    }
+    @foreach (var cm in Model.Chats)
+    {
+        <div class="col-12 d-flex flex-wrap flex-xl-nowrap p-3 mb-3 position-relative" style="border: 1px dashed;background: #1d253b;">
+            <div class="left mr-xl-2 col-12 col-xl-4 mb-2 mb-xl-0 mt-2 mt-xl-0">
+                <img src="~/img/@cm.Order.Advertisement.Car.MainImageUrl" style="width:100%; height:100%;object-fit:cover" />
+            </div>
+            <div class="right ml-xl-2 col-12 col-xl-8">
+                <h4 class="text-center text-info">Unresponsed Order</h4>
+                <a class="btn btn-block btn-info" asp-area="" asp-controller="Cars" asp-action="Details" asp-route-id="@cm.Order.AdvertisementId">Details</a>
+                <a class="btn btn-block btn-warning btn-info" asp-action="chat" asp-route-id="@cm.OrderId">Chat</a>
+            </div>
+        </div>
+    }
+
+</div>

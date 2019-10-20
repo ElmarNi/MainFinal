@@ -1,0 +1,205 @@
+﻿@model CarDetailsVm
+<style>
+    form span {
+        color: red;
+        font-size: 14px;
+    }
+    .delete{
+        position: absolute;
+        bottom: 20px;
+        right: 19px;
+        color: green;
+        font-size: 20px;
+        padding: 0px 10px;
+        color: #00D231 !important;
+    }
+</style>
+<section id="sub-banner" style="background-image: url(/img/@ViewBag.Banner)">
+    <div class="sub-banner">
+        <div class="breadcrumb-areas">
+            <h1>Car Details</h1>
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a asp-action="Index">Cars</a></li>
+                <li class="active">@Model.Advertisement.Car.Model.Brand.Name @Model.Advertisement.Car.Model.Name</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- details -->
+<section id="single-car-details">
+    <div class="container">
+        <div class="row heading-row">
+            <div class="col-12">
+                <h2 class="section-title mb-3 text-left">
+                    @Model.Advertisement.Car.Model.Brand.Name @Model.Advertisement.Car.Model.Name
+                </h2>
+            </div>
+        </div>
+        <div class="row body-row">
+            <div class="col-12 position-relative">
+                @if (Model.Advertisement.Car.IsVip)
+                {
+                    <div class="vip">
+                        <span>VIP</span>
+                        <i class="far fa-gem"></i>
+                    </div>
+                }
+                <img src="~/img/@Model.Advertisement.Car.MainImageUrl" class="img-fluid w-100" style="height:600px; object-fit:cover">
+                <a asp-action="Book" asp-route-id="@Model.Advertisement.Id" class="btn btn-block custom-bg-green-btn my-4">Book Now</a>
+                <ul class="tabs">
+                    <li class="active" data-id="1">
+                        <a href="#">
+                            vehicle overwiev
+                        </a>
+                    </li>
+                    <li data-id="2">
+                        <a href="#">
+                            technical
+                        </a>
+                    </li>
+                    <li data-id="3">
+                        <a href="#">
+                            gallery
+                        </a>
+                    </li>
+                    <li data-id="4">
+                        <a href="#">
+                            reviews
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-contents mt-4">
+                    <div data-id="1" class="tab-content active">
+                        <p style="word-break:break-all; margin:0">
+                            @Model.Advertisement.Car.Description
+                        </p>
+                    </div>
+                    <div data-id="2" class="tab-content">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="pt-0">Brand</td>
+                                    <td class="pt-0">@Model.Advertisement.Car.Model.Brand.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>Model</td>
+                                    <td>@Model.Advertisement.Car.Model.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>country</td>
+                                    <td>@Model.Advertisement.Car.City.Country.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>city</td>
+                                    <td>@Model.Advertisement.Car.City.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>category</td>
+                                    <td>@Model.Advertisement.Car.CarClass.Name </td>
+                                </tr>
+                                <tr>
+                                    <td>Body</td>
+                                    <td>@Model.Advertisement.Car.BodyType.Body</td>
+                                </tr>
+                                <tr>
+                                    <td>Milage</td>
+                                    <td>@Model.Advertisement.Car.Milage km</td>
+                                </tr>
+                                <tr>
+                                    <td>Fuel type</td>
+                                    <td>@Model.Advertisement.Car.FuelType.Fuel</td>
+                                </tr>
+                                <tr>
+                                    <td>transmission</td>
+                                    <td>@Model.Advertisement.Car.Transmission.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>color</td>
+                                    <td>@Model.Advertisement.Car.Color.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>year</td>
+                                    <td>@Model.Advertisement.Car.ManufactureYear</td>
+                                </tr>
+                                <tr>
+                                    <td>engine</td>
+                                    <td>@Model.Advertisement.Car.Engine l</td>
+                                </tr>
+                                <tr>
+                                    <td>Wheel Drive</td>
+                                    <td>@Model.Advertisement.Car.WheelDrive.Drive</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div data-id="3" class="tab-content">
+                        <div class="detail-gallery d-flex">
+                            @foreach (var img in Model.CarDetailImages)
+                            {
+                                <a href="~/img/@img.ImageUrl" data-toggle="lightbox" data-gallery="gallery"
+                                   class="col-4 p-0">
+                                    <img src="~/img/@img.ImageUrl" title="Click for full size" style="object-fit: cover">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                    <div data-id="4" class="tab-content">
+                        <div class="comments">
+                            @foreach (var review in Model.Reviews.OrderByDescending(r => r.Date))
+                            {
+                                <div class="review position-relative" style="word-break:break-all;">
+                                    <div class="left-side mb-3 d-flex justify-content-between">
+                                        <h5>@review.CustomerName</h5>
+                                        <span style="font-size:12px; color:gray;">@review.Date.Day, @review.Date.ToString("MMM") @review.Date.Year</span>
+                                    </div>
+                                    <div class="content">
+                                        <p>
+                                            @review.Comment
+                                        </p>
+                                        @if (User.IsInRole("moderator"))
+                                        {
+                                            <a class="delete" href="" data-id="@review.Id"><i class="fas fa-trash"></i></a>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="write-review mb-0">
+                            <h5>Write a review</h5>
+                            <form method="post" class="d-lg-flex flex-wrap">
+                                <div asp-validation-summary="ModelOnly"></div>
+                                <div class="form-group col-lg-6 p-0 pr-lg-2">
+                                    <input type="text" class="form-control" placeholder="Name" asp-for="Review.CustomerName">
+                                    <span asp-validation-for="Review.CustomerName"></span>
+                                </div>
+                                <div class="form-group col-lg-6 p-0 pl-lg-2">
+                                    <input type="email" class="form-control" placeholder="Email" asp-for="Review.Email">
+                                    <span asp-validation-for="Review.Email"></span>
+                                </div>
+                                <div class="form-group col-12 p-0">
+                                    <textarea class="form-control" cols="30" rows="10"
+                                              placeholder="Write your review" asp-for="Review.Comment"></textarea>
+                                    <span asp-validation-for="Review.Comment"></span>
+                                </div>
+                                <div class="col-12 p-0 text-right">
+                                    <input type="submit" value="Submit Review" class="custom-bg-green-btn btn btn-lg px-md-5 py-md-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+}
+@section Css{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+}

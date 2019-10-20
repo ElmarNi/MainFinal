@@ -1,0 +1,35 @@
+﻿@model TermContent
+<style>
+    option{
+        color: black;
+    }
+</style>
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Terms</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Term Content</li>
+        </ol>
+    </nav>
+    <form method="post"class="w-100 d-flex flex-wrap">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div class="form-group col-md-6">
+            <label>Term Header</label>
+            <select class="form-control" asp-for="TermHeaderId" asp-items="@(new SelectList(ViewBag.Headers, "Id", "Header"))">
+                <option>Select Term Header</option>
+            </select>
+            <span asp-validation-for="TermHeaderId" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Content"></label>
+            <input class="form-control" asp-for="Content"/>
+            <span class="text-danger" asp-validation-for="Content"></span>
+        </div>
+        <input type="submit" class="btn btn-block btn-success" value="Create" />
+    </form>
+    @section Scripts{
+        <partial name="_ValidationScriptsPartial" />
+    }
+</div>

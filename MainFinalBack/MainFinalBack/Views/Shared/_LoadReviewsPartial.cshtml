@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+@foreach (var review in Model)
+{
+    <div class="review position-relative" style="word-break:break-all;">
+        <div class="left-side mb-3 d-flex justify-content-between">
+            <h5>@review.CustomerName</h5>
+            <span style="font-size:12px; color:gray;">@review.Date.Day, @review.Date.ToString("MMM") @review.Date.Year</span>
+        </div>
+        <div class="content">
+            <p style="word-break:break-all">
+                @review.Comment
+            </p>
+            @if (User.IsInRole("moderator"))
+            {
+                <a class="delete" href="" data-id="@review.Id"><i class="fas fa-trash"></i></a>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<Blog>
+@foreach (var blog in Model)
+{
+    <div class="single-news mb-5">
+        <div class="image-wrapper w-100">
+            <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id">
+                <img src="img/@blog.MainImageUrl" class="img-fluid w-100">
+            </a>
+        </div>
+        <div class="single-news-header pt-3 pb-2">
+            <div class="news-datebox mr-3">
+                <h4 >@blog.UpdatedDate.Day</h4>
+                <span>@blog.UpdatedDate.ToString("MMM"), @blog.UpdatedDate.Year</span>
+            </div>
+            <div class="news-header">
+                <h5 style="word-break:break-word">
+                    <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id">
+                        @blog.Header
+                    </a>
+                </h5>
+            </div>
+        </div>
+        <div class="single-news-body">
+            <p style="word-break:break-word">
+                @if (blog.Content.ToString().Count() > 300)
+                {
+                    @blog.Content.ToString().Remove(200);
+                }
+                else
+                {
+                    @blog.Content
+                }...
+            </p>
+        </div>
+        <div class="single-news-footer pt-3">
+            <div class="read-more">
+                <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id" class="read-more-btn">Read More</a>
+            </div>
+        </div>
+    </div>
+
+}

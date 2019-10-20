@@ -1,0 +1,54 @@
+﻿
+@model IEnumerable<Order>
+    <style>
+        table img {
+            max-width: unset;
+        }
+    </style>
+
+<div class="container" id="unresponsed-orders">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="index">Moderator</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Unresponsed orders</li>
+        </ol>
+    </nav>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>User Email</th>
+                    <th>Client Email</th>
+                    <th>Order date</th>
+                    <th>Response date</th>
+                    <th>Pick up date</th>
+                    <th>Return date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var o in Model)
+                {
+                <tr>
+                    <td>@o.Firstname</td>
+                    <td>@o.Lastname</td>
+                    <td>@o.Advertisement.ApplicationUser.Email</td>
+                    <td>@o.Email</td>
+                    <td>@o.OrderDate.Day, @o.OrderDate.ToString("MMM"), @o.OrderDate.Year</td>
+                    <td>@o.ResponseDate.Day, @o.ResponseDate.ToString("MMM"), @o.ResponseDate.Year</td>
+                    <td>@o.PickDate.Day, @o.PickDate.ToString("MMM"), @o.PickDate.Year</td>
+                    <td>@o.ReturnDate.Day, @o.ReturnDate.ToString("MMM"), @o.ReturnDate.Year</td>
+                    <td>
+                        <a class="btn btn-block btn-info" asp-area="" asp-controller="Cars" asp-action="Details" asp-route-id="@o.AdvertisementId">Ad details</a>
+                        <a class="btn btn-block btn-warning my-2" asp-action="Chat" asp-route-id="@o.Id">Chat</a>
+                        <a class="btn btn-block btn-danger my-2" asp-action="RemoveChat" asp-route-id="@o.Id">Remove chat</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

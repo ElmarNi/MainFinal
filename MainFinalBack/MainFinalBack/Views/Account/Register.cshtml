@@ -1,0 +1,69 @@
+﻿@model RegisterVM
+<style>
+    form .field-validation-error{
+        color: red;
+        font-size: 14px;
+        display:block;
+    }
+</style>
+<section id="register">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-10 col-md-9 col-lg-5 wrapper h-100">
+                <a href="/" class="black-logo-text mb-4" title="Go to home">
+                    <p class="rent">Rent</p>
+                    <p class="now">Now</p>
+                </a>
+                <form method="POST">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group mb-3">
+                        <label asp-for="@Model.Firstname"></label>
+                        <input asp-for="@Model.Firstname" placeholder="Type your firstname" class="form-control sign-in-input">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.Firstname"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="@Model.Lastname"></label>
+                        <input asp-for="@Model.Lastname" placeholder="Type your lastname" class="form-control sign-in-input">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.Lastname"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="@Model.Email"></label>
+                        <input asp-for="@Model.Email" placeholder="Type your email" class="form-control sign-in-input">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.Email"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="@Model.UserName"></label>
+                        <input asp-for="@Model.UserName" placeholder="Type your username" class="form-control sign-in-input">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.UserName"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="@Model.Password"></label>
+                        <input asp-for="@Model.Password" placeholder="Type your password" class="form-control sign-in-input">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.Password"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="@Model.ConfirmPassword"></label>
+                        <input asp-for="@Model.ConfirmPassword" placeholder="Confirm your password" class="form-control sign-in-input">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.ConfirmPassword"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="@Model.TermsCheck">
+                        <label for="">I agree to the <a asp-controller="terms" asp-action="index">Terms and Conditions</a></label>
+                        <span asp-validation-for="@Model.TermsCheck"></span>
+                    </div>
+                    <input type="submit" value="Register" class="mt-4">
+                </form>
+                <p class="text-center mt-5"><a asp-action="login">Or Login</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

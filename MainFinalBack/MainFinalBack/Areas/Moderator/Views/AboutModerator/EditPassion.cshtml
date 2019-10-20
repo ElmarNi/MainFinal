@@ -1,0 +1,55 @@
+﻿@model OurPassionAboutUs
+<style>
+    input[type=file]{
+        position: unset !important;
+        opacity:1 !important;
+        height:unset !important
+    }
+</style>
+<div class="container">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="index">Dashboard</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">About Us</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data" class="w-100 d-flex flex-wrap">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group col-6 mb-3">
+                    <label>Content Photo</label>
+                    <input class="form-control" asp-for="Photo" />
+                    <span asp-validation-for="Photo" class="text-danger"></span>
+                </div>
+                <div class="form-group col-6 mb-3">
+                    <label>Background Photo</label>
+                    <input class="form-control" asp-for="SectionPhoto" />
+                    <span asp-validation-for="SectionPhoto" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label asp-for="SmallHeader"></label>
+                    <input class="form-control" asp-for="SmallHeader" />
+                    <span asp-validation-for="SmallHeader" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="MainHeader"></label>
+                    <input class="form-control" asp-for="MainHeader">
+                    <span asp-validation-for="MainHeader" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12 mb-3">
+                    <label asp-for="Content"></label>
+                    <textarea asp-for="Content" class="form-control"></textarea>
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <input type="submit" class="btn btn-block btn-success mx-3" value="Update" />
+            </form>
+
+        </div>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

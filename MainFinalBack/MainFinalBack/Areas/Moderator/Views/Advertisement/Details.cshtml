@@ -1,0 +1,142 @@
+﻿@model ModeratorAdDetailsVM
+<style>
+    option {
+        color: black;
+    }
+
+    #choosePhoto {
+        display: block;
+        width: 100%;
+        height: 150px;
+        border: 1px dashed #6179ba;
+        background-color: #1d253b;
+        font-size: 40px;
+        color: white;
+    }
+    input, textarea{
+        color: white !important
+    }
+</style>
+<div class="container" id="adDetails">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="index">Moderator</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Advertisements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Details</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-12">
+            <form class="w-100 d-flex flex-wrap my-3 position-relative">
+                <img src="~/img/@Model.Advertisement.Car.MainImageUrl" style="width:100%; height:auto;max-height:600px; object-fit:cover" id="mainIMG" class="mb-3" />
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.Model.Brand"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.Model.Brand.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.Model"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.Model.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.City.Country"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.City.Country.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.City"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.City.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.CarClass"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.CarClass.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.BodyType"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.BodyType.Body" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.Milage"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.Milage" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.FuelType"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.FuelType.Fuel" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.Transmission"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.Transmission.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.Color"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.Color.Name" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.ManufactureYear"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.ManufactureYear" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.Engine"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.Engine" />
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Advertisement.Car.WheelDrive"></label>
+                    <input class="form-control" disabled asp-for="Advertisement.Car.WheelDrive.Drive" />
+                </div>
+                <div class="form-group col-md-9">
+                    <label asp-for="Advertisement.Car.Description"></label>
+                    <textarea disabled rows="20" cols="20" class="form-control" asp-for="Advertisement.Car.Description"></textarea>
+                </div>
+                <div class="form-group col-12 d-flex flex-wrap align-items-center" id="detailImages">
+                    @if (Model.Advertisement.Car.CarDetailImages != null)
+                    {
+                        @foreach (var img in Model.Advertisement.Car.CarDetailImages)
+                        {
+                            <div class="detail-image-single">
+                                <img src="~/img/@img.ImageUrl"/>
+                            </div>
+                        }
+                    }
+                </div>
+
+            </form>
+            <div class="accept-btns mx-2">
+                <a class="btn btn-warning btn-block btn-lg" href="" id="question-btn">Accept?</a>
+                <div class="buttons d-none justify-content-between mt-2">
+                    <a class="btn btn-success btn-block m-0 mr-2 px-3 py-2" id="accept" asp-action="Accept" asp-route-id="@Model.Advertisement.Id">
+                        <i class="tim-icons icon-check-2"></i>
+                    </a>
+                    <button type="button" class="btn btn-info btn-lg btn-block m-0 ml-2 px-3 py-2" data-toggle="modal" data-target="#myModal">
+                        <i class="tim-icons icon-simple-remove"></i>
+                    </button>
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Message</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="post" asp-action="Details" asp-route-id="@Model.Advertisement.Id">
+                                        <div class="form-group">
+                                            <label>Message</label>
+                                            <input class="form-control text-dark" asp-for="Message.Body" />
+                                            <span asp-validation-for="Message.Body" class="text-danger"></span>
+                                        </div>
+                                        <input type="submit" class="btn btn-block btn-success" value="Send" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

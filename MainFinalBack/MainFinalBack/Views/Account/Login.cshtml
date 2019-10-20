@@ -1,0 +1,45 @@
+﻿@model LoginVM
+<style>
+    form span {
+        font-size: 14px;
+        color: red;
+    }
+
+    ul {
+        color: red;
+        font-size: 14px;
+    }
+</style>
+<section id="login">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-10 col-md-9 col-lg-5 wrapper h-100">
+                <a href="/" class="black-logo-text mb-4" title="Go to home">
+                    <p class="rent">Rent</p>
+                    <p class="now">Now</p>
+                </a>
+                <form method="POST">
+                    <div asp-validation-summary="ModelOnly"></div>
+                    <div class="form-group mb-3 position-relative">
+                        <label asp-for="@Model.Email"></label>
+                        <input asp-for="@Model.Email" placeholder="Type your username" class="form-control sign-in-input px-3">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.Email"></span>
+                    </div>
+                    <div class="form-group position-relative">
+                        <label asp-for="@Model.Password"></label>
+                        <input asp-for="@Model.Password" placeholder="Type your password" class="form-control sign-in-input px-3">
+                        <span class="line"></span>
+                        <span asp-validation-for="@Model.Password"></span>
+                    </div>
+                    <p><a asp-action="ForgotPassword">Forgot password?</a></p>
+                    <input type="submit" value="Login" class="mt-4">
+                </form>
+                <p class="text-center mt-5"><a asp-action="register">Or Register</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,62 @@
+﻿
+@{
+    Layout = null;
+}
+
+@model IEnumerable<Advertisement>
+<input type="hidden" value="@ViewBag.SelectedAdCount" id="count" />
+<input type="hidden" value="3" id="takenCars" />
+@foreach (var ad in Model)
+{
+    <div class="col-12">
+        <div class="car-list-item">
+            <div class="image">
+                <a asp-controller="Cars" asp-action="details" asp-route-id="@ad.Id">
+                    <img src="~/img/@ad.Car.MainImageUrl">
+                </a>
+            </div>
+            <div class="car-details">
+                <h2 class="mb-2">
+                    <a asp-controller="Cars" asp-action="details" asp-route-id="@ad.Id">@ad.Car.Model.Brand.Name, @ad.Car.Model.Name</a>
+                </h2>
+                <div class="reviews">
+                    <a>@ad.UpdatedDate.Day, @ad.UpdatedDate.ToString("MMMM"), @ad.UpdatedDate.Year</a>
+                </div>
+                <div class="about-car my-2">
+                    <span>
+                        <i class="fas fa-map-marker-alt"></i>
+                        @ad.Car.City.Country.Name, @ad.Car.City.Name
+                    </span>
+                    <span>
+                        <i class="fas fa-cogs"></i>
+                        @ad.Car.Transmission.Name
+                    </span>
+                    <span>
+                        <i class="far fa-calendar-times"></i>
+                        @ad.Car.ManufactureYear
+                    </span>
+                    @if (ad.Car.IsVip)
+                    {
+                        <span>
+                            <i class="fas fa-gem"></i>
+                            VIP
+                        </span>
+                    }
+                    <span>
+                        <i class="fa fa-list-alt"></i>
+                        @ad.Car.CarClass.Name
+                    </span>
+                </div>
+                <div class="more">
+                    <a asp-controller="Cars" asp-action="details" asp-route-id="@ad.Id">More information</a>
+                </div>
+            </div>
+            <div class="booking">
+                <div class="price">
+                    <span>$@ad.Car.Price</span>/day
+                </div>
+                <a asp-controller="Cars" asp-action="Book" asp-route-id="@ad.Id" class="btn btn-lg w-100 custom-bg-green-btn">Book Now</a>
+            </div>
+        </div>
+    </div>
+}

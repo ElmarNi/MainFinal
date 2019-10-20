@@ -1,0 +1,42 @@
+﻿@model AboutUsVM
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="dashboard">Dashboard</a></li>
+        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+    </ol>
+</nav>
+<div class="row">
+    @foreach (var vision in Model.OurVisions)
+    {
+        <div class="col-sm-6 col-lg-3 d-flex mb-3">
+            <div class="dot mr-3"></div>
+            <div class="content">
+                <h4 class="mb-2" style="word-break:break-word">@vision.Header</h4>
+                <p style="word-break:break-word">@vision.Content</p>
+                <a class="btn btn-warning btn-block mt-3" asp-action="EditVision" asp-route-id="@vision.Id">Edit</a>
+            </div>
+        </div>
+    }
+</div>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Content Image</td>
+                <td>Background Image</td>
+                <td>Small Header</td>
+                <td>Main Header</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img style="width: 150px; object-fit:cover;" src="~/img/@Model.OurPassions.ImageUrl" /></td>
+                <td><img style="width: 150px; object-fit:cover;" src="~/img/@Model.OurPassions.SectionBannerImage" /></td>
+                <td>@Model.OurPassions.SmallHeader</td>
+                <td>@Model.OurPassions.MainHeader</td>
+                <td> <a class="btn btn-warning btn-block mt-3" asp-action="EditPassion" asp-route-id="@Model.OurPassions.Id">Edit</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

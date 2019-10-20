@@ -1,0 +1,235 @@
+﻿@model HomeVM
+
+@if (ViewBag.VipCarsCount > 0)
+{
+    <!-- bootstrap slider -->
+    <section id="slider" class="p-0 mt-5 mt-lg-0">
+        <div class="container-fluid">
+            <div class="row position-relative">
+
+                <div id="carouselExampleControls" class="carousel slide w-100" data-ride="carousel">
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < Model.Advertisements.Count(); i++)
+                        {
+                            <div class="carousel-item position-relative @(i == 0? "active" : "")">
+                                <div class="details">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            @Model.Advertisements.ElementAt(i).Car.City.Country.Name, @Model.Advertisements.ElementAt(i).Car.City.Name
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-cogs"></i>
+                                            Transmission: @Model.Advertisements.ElementAt(i).Car.Transmission.Name
+                                        </li>
+                                        <li>
+                                            <i class="far fa-calendar-times"></i>
+                                            Year: @Model.Advertisements.ElementAt(i).Car.ManufactureYear
+                                        </li>
+                                        <li>
+                                            <i class="fas fa-road"></i>
+                                            Milage: @Model.Advertisements.ElementAt(i).Car.Milage
+                                        </li>
+                                        <li class="m-0">
+                                            <i class="fas fa-palette"></i>
+                                            Color: @Model.Advertisements.ElementAt(i).Car.Color.Name
+                                        </li>
+                                    </ul>
+                                    <a asp-controller="Cars" asp-action="Details" asp-route-id="@Model.Advertisements.ElementAt(i).Id">Details</a>
+                                </div>
+                                <img src="~/img/@Model.Advertisements.ElementAt(i).Car.MainImageUrl" class="d-block w-100" alt="...">
+                            </div>
+
+                        }
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section id="sub-banner" style="background-image: url(img/@ViewBag.Banner)">
+        <div class="sub-banner">
+            <div class="breadcrumb-areas">
+                <h1>Home</h1>
+                <ul class="breadcrumbs">
+                    <li class="active">Home</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- why choose us -->
+<section id="chooseUs">
+    <div class="container">
+        <div class="row heading-row justify-content-center">
+            <h2 class="section-title">
+                Why choose us
+            </h2>
+        </div>
+
+        <div class="row body-row">
+            <div class="col-md-6 col-lg-4 d-flex align-items-center choose-single mb-3">
+                <div class="icon-side">
+                    <i class="fas fa-reply"></i>
+                </div>
+                <div class="content-side">
+                    <p>response faster 7 days</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-center choose-single mb-3">
+                <div class="icon-side">
+                    <i class="fas fa-signal" style="font-size: 20px"></i>
+                </div>
+                <div class="content-side">
+                    <p>7/24 We're at your service </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-center choose-single mb-3">
+                <div class="icon-side">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="content-side">
+                    <p>convenient car choice</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-center choose-single mb-3">
+                <div class="icon-side">
+                    <i class="fas fa-ad"></i>
+                </div>
+                <div class="content-side">
+                    <p>free advertisements</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-center choose-single mb-3">
+                <div class="icon-side">
+                    <span>VIP</span>
+                </div>
+                <div class="content-side">
+                    <p>vip advertisements</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex align-items-center choose-single mb-3">
+                <div class="icon-side">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="content-side">
+                    <p>AT/M transmission</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- vehicle types -->
+@if ( ViewBag.LowestStandart != null &&  ViewBag.LowestEconom != null &&  ViewBag.LowestPremium != null)
+{
+    <section id="vehicleTypes">
+        <div class="container">
+            <div class="row heading-row justify-content-center">
+                <h2 class="section-title text-white">
+                    vehicle categories
+                </h2>
+            </div>
+            <div class="row body-row">
+                <div class="col-md-4 mb-3">
+                    <div class="vehicle-type-single p-4">
+                        <div class="top mb-4">
+                            <h3 class="mb-4">Economy</h3>
+                            <a class="price" asp-controller="Cars" asp-action="index">
+                                <p>from</p>
+                                <h4>$@ViewBag.LowestEconom/</h4> <span>day</span>
+                            </a>
+                        </div>
+                        <div class="text-center bottom position-relative">
+                            <img src="img/economy.png" alt="economy class" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="vehicle-type-single p-4">
+                        <div class="top mb-4">
+                            <h3 class="mb-4">Standart</h3>
+                            <a class="price" asp-controller="Cars" asp-action="index">
+                                <p>from</p>
+                                <h4>$@ViewBag.LowestStandart/</h4> <span>day</span>
+                            </a>
+                        </div>
+                        <div class="text-center bottom position-relative">
+                            <img src="img/standart.png" alt="standart class" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="vehicle-type-single p-4">
+                        <div class="top mb-4">
+                            <h3 class="mb-4">Premium</h3>
+                            <a class="price" asp-controller="Cars" asp-action="index">
+                                <p>from</p>
+                                <h4>$ @ViewBag.LowestPremium/</h4> <span>day</span>
+                            </a>
+                        </div>
+                        <div class="text-center bottom position-relative">
+                            <img src="img/premium.png" alt="premium class" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- news -->
+<section id="news">
+    <div class="container">
+        <div class="row heading-row justify-content-center">
+            <h2 class="section-title text-black">
+                News & Updates
+            </h2>
+        </div>
+        <div class="row body-row justify-content-center">
+            @foreach (var blog in Model.Blogs)
+            {
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <div class="single-news">
+                        <div class="image">
+                            <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id">
+                                <img src="img/@blog.MainImageUrl">
+                            </a>
+                        </div>
+                        <div class="title">
+                            <div class="news-datebox">
+                                <h4>@blog.UpdatedDate.Day</h4>
+                                <span>@blog.UpdatedDate.ToString("MMM"), @blog.UpdatedDate.Year</span>
+                            </div>
+                            <div class="news-header">
+                                <h5>
+                                    <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id" style="word-break:break-word">
+                                        @blog.Header
+                                    </a>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

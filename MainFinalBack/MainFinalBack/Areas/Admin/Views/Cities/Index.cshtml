@@ -1,0 +1,49 @@
+﻿@model LoadCitiesAdminVM
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Cities</li>
+    </ol>
+</nav>
+<style>
+    option{
+        color: black
+    }
+</style>
+<div class="row" id="Cities">
+    <div class="col-12 mb-3 form-group">
+        <div class="col-12">
+            <select id="selectCountries" class="form-control" asp-items="@(new SelectList(ViewBag.Countries, "Id", "Name"))">
+                <option class=" text-dark" value="">Select Country</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12" >
+        <div class="col-12 table-responsive" id="Load">
+            <div id="loader" class="d-none justify-content-center">
+                <img src="~/img/ajaxSpinner.gif" style="height:50px;" />
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mt-3">
+        <form method="post" class="w-100 d-flex flex-wrap">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group col-6">
+                <label>Country:</label>
+                <select class="form-control" asp-items="@(new SelectList(ViewBag.Countries, "Id", "Name"))" asp-for="City.CountryId">
+                    <option class=" text-dark" value="">Select Country</option>
+                </select>
+                <span asp-validation-for="City.CountryId" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6">
+                <label>City:</label>
+                <input class="form-control" asp-for="City.Name" />
+                <span asp-validation-for="City.Name" class="text-danger"></span>
+            </div>
+            <input type="submit" class="mx-3 btn btn-block btn-success" value="Add" />
+        </form>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

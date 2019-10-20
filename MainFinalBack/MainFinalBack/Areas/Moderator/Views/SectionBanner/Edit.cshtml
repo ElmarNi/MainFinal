@@ -1,0 +1,34 @@
+﻿@model SectionBanner
+    <style>
+        input[type=file] {
+            position: unset !important;
+            opacity: 1 !important;
+            height: unset !important
+        }
+    </style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+        <li class="breadcrumb-item"><a asp-action="Index">Section Banners</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit</li>
+    </ol>
+</nav>
+<form method="post" enctype="multipart/form-data" class="w-100 my-3">
+    <img src="~/img/@Model.ImageUrl" style="width:100%; height:600px; object-fit:cover"class="mb-3" />
+    <div asp-validation-summary="ModelOnly"></div>
+    <div class="form-group col-12 p-0">
+        <label asp-for="Photo"></label>
+        <input class="form-control" asp-for="Photo" />
+        <span asp-validation-for="Photo" class="text-danger"></span>
+    </div>
+    <input type="submit" class="btn btn-block btn-success" value="Update" />
+</form>
+
+<div class="container">
+    <div class="row">
+
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model ChatModeratorVM
+
+<div class="container" id="ModeratorChat">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="index">User</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Messages</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Chat</li>
+        </ol>
+    </nav>
+    <div class="messages" style="min-height: calc(100vh - 320px);max-height: calc(100vh - 320px); overflow-y:scroll">
+        @foreach (var m in Model.ChatMessages)
+        {
+            @if (m.Message.From == Model.ApplicationUser.Id)
+            {
+                <span class="d-block">@m.Message.Date.Day,@m.Message.Date.ToString("MMM"), @m.Message.Date.Year - @m.Message.Date.ToString("HH:mm")</span>
+                <div class="message" style="background-color:#344269">
+                    <p style="margin:0; word-break:break-word">@m.Message.Body</p>
+                </div>
+            }
+            else
+            {
+                <span class="d-block text-right">@m.Message.Date.Day,@m.Message.Date.ToString("MMM"), @m.Message.Date.Year</span>
+                <div class="message text-right">
+                    <p style="margin:0; word-break:break-word">@m.Message.Body</p>
+                </div>
+            }
+        }
+
+    </div>
+    <form method="post" style="position:absolute; bottom:2%; display:contents">
+        <div class="form-group">
+            <label>Message</label>
+            <input class="form-control" asp-for="Message.Body" />
+            <span asp-validation-for="Message.Body" class="text-danger"></span>
+        </div>
+        <input type="submit" class="btn btn-block btn-success" value="Send" />
+    </form>
+</div>
+

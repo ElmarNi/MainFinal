@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Advertisement>
+
+
+<style>
+    table div:not(.delete-buttons) {
+        display: none !important;
+    }
+
+    table img {
+        width: 150px !important;
+        max-width: unset;
+    }
+</style>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Advertisements</li>
+        </ol>
+    </nav>
+    <div class="table-responsive">
+        <table class="table" id="ads">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>User Email</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Verified</th>
+                    <th>Updated date</th>
+                    <th>Price</th>
+                    <th>Is VIP?</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ad in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="~/img/@ad.Car.MainImageUrl" />
+                        </td>
+
+                        <td>@ad.ApplicationUser.Email</td>
+
+                        <td>@ad.Car.Model.Brand.Name</td>
+
+                        <td>@ad.Car.Model.Name</td>
+
+                        <td>
+                            @if (ad.IsVerified)
+                            {
+                                <span>Yes</span>
+                            }
+                            else
+                            {
+                                <span>No</span>
+                            }
+                        </td>
+
+                        <td>@ad.UpdatedDate.Day/@ad.UpdatedDate.Month/@ad.UpdatedDate.Year</td>
+
+                        <td>@ad.Car.Price $</td>
+
+                        <td>
+                            @if (ad.Car.IsVip)
+                            {
+                                <span>Yes</span>
+                            }
+                            else
+                            {
+                                <span>No</span>
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-info btn-block text-center mb-2" style="width:200px" asp-action="Details" asp-route-id="@ad.Id">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

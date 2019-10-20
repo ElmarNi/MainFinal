@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA96dlS3aCHEmvShsqfmRJ5gAAAAACAAAAAAAQZgAAAAEAACAAAADXmrBEXQjpA7WXsZJXawnSFOu7ntxzqv3DpCYtdQpX2AAAAAAOgAAAAAIAACAAAAAMfD2j2aMifomP1cjSzasuHnrDUoZWPa5B6Mf/FDT3iiAAAABGl6ARjWoep3208JFFNyQQwN2Rll6RKffUMv3i9EPrgEAAAABEH4HYyzImYDnX0W42GXLFlBGNQ0NKTNve3ifxtQk86/bfsr3ox2vG84KiWZ8XkCRmiuiT6/2qppu+rBLxF6TT</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp-eu.site4now.net/site</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>09/14/2019 10:31:02</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>10/19/2019 13:14:04</publishTime>
+    </File>
+    <File Include="dotnet-aspnet-codegenerator-design.dll">
+      <publishTime>09/24/2019 19:57:52</publishTime>
+    </File>
+    <File Include="MainFinalBack.deps.json">
+      <publishTime>10/20/2019 19:08:59</publishTime>
+    </File>
+    <File Include="MainFinalBack.dll">
+      <publishTime>10/20/2019 19:07:23</publishTime>
+    </File>
+    <File Include="MainFinalBack.pdb">
+      <publishTime>10/20/2019 19:07:23</publishTime>
+    </File>
+    <File Include="MainFinalBack.runtimeconfig.json">
+      <publishTime>10/17/2019 18:15:48</publishTime>
+    </File>
+    <File Include="MainFinalBack.Views.dll">
+      <publishTime>10/20/2019 19:08:58</publishTime>
+    </File>
+    <File Include="MainFinalBack.Views.pdb">
+      <publishTime>10/20/2019 19:08:58</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.Workspaces.dll">
+      <publishTime>05/08/2019 22:25:36</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.Workspaces.dll">
+      <publishTime>05/08/2019 22:25:39</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll">
+      <publishTime>09/24/2019 19:57:20</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Core.dll">
+      <publishTime>09/24/2019 19:57:24</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.dll">
+      <publishTime>09/24/2019 19:57:28</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll">
+      <publishTime>09/24/2019 19:57:26</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll">
+      <publishTime>09/24/2019 19:57:22</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll">
+      <publishTime>09/24/2019 19:57:20</publishTime>
+    </File>
+    <File Include="Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll">
+      <publishTime>09/24/2019 19:57:30</publishTime>
+    </File>
+    <File Include="Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="NuGet.Frameworks.dll">
+      <publishTime>05/08/2019 22:25:38</publishTime>
+    </File>
+    <File Include="System.Composition.AttributedModel.dll">
+      <publishTime>05/08/2019 22:25:40</publishTime>
+    </File>
+    <File Include="System.Composition.Convention.dll">
+      <publishTime>05/08/2019 22:25:40</publishTime>
+    </File>
+    <File Include="System.Composition.Hosting.dll">
+      <publishTime>05/08/2019 22:25:40</publishTime>
+    </File>
+    <File Include="System.Composition.Runtime.dll">
+      <publishTime>05/08/2019 22:25:40</publishTime>
+    </File>
+    <File Include="System.Composition.TypedParts.dll">
+      <publishTime>05/08/2019 22:25:40</publishTime>
+    </File>
+    <File Include="System.Web.Helpers.dll">
+      <publishTime>08/08/2012 17:58:20</publishTime>
+    </File>
+    <File Include="System.Web.Mvc.dll">
+      <publishTime>09/25/2014 17:11:36</publishTime>
+    </File>
+    <File Include="System.Web.Razor.dll">
+      <publishTime>08/08/2012 17:57:48</publishTime>
+    </File>
+    <File Include="System.Web.WebPages.Deployment.dll">
+      <publishTime>08/08/2012 17:58:20</publishTime>
+    </File>
+    <File Include="System.Web.WebPages.dll">
+      <publishTime>08/08/2012 17:58:20</publishTime>
+    </File>
+    <File Include="System.Web.WebPages.Razor.dll">
+      <publishTime>08/08/2012 17:58:20</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/20/2019 19:08:59</publishTime>
+    </File>
+    <File Include="wwwroot/css/style.css">
+      <publishTime>10/20/2019 12:55:00</publishTime>
+    </File>
+    <File Include="wwwroot/ErrorPage/css/style.css">
+      <publishTime>09/27/2019 16:46:12</publishTime>
+    </File>
+    <File Include="wwwroot/ErrorPage/img/bg.jpg">
+      <publishTime>06/18/2018 15:57:44</publishTime>
+    </File>
+    <File Include="wwwroot/favicon.ico">
+      <publishTime>09/14/2019 10:31:03</publishTime>
+    </File>
+    <File Include="wwwroot/img/AboutUs/15e98739-9868-46a3-813b-c243d0ab084eabout-img.jpg">
+      <publishTime>10/16/2019 19:57:01</publishTime>
+    </File>
+    <File Include="wwwroot/img/AboutUs/3152aeca-74d7-4b32-8e09-213a9e2a8aeaabout-bg-1.jpg">
+      <publishTime>10/16/2019 19:56:39</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/0aba8096-22ba-4055-bd11-240f7e7c0c89single-post-img.jpg">
+      <publishTime>10/14/2019 12:51:18</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/14f540ed-5102-4c42-864a-2fbe2716a664single-post-img-2.jpg">
+      <publishTime>10/05/2019 13:33:40</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/167d05da-9ad5-49e1-baf3-4e88fb2065c9single-post-img.jpg">
+      <publishTime>10/05/2019 13:33:40</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/1ef5f0f1-1431-4a60-93e4-71ab4cd7ba946936266-2013-bmw-s1000rr.jpg">
+      <publishTime>10/11/2019 13:36:06</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/20b2a62d-6913-4d99-a2ea-35b3bd177e75single-post-img-4.jpg">
+      <publishTime>10/03/2019 23:20:34</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/2ac4700f-99fb-4dcc-82ef-e9109c7e34e0terms-banner.jpg">
+      <publishTime>10/04/2019 00:47:58</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/2ea1b085-98e8-49bd-9a89-31690419acd4single-post-img.jpg">
+      <publishTime>10/03/2019 22:42:27</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/30f9fe40-a690-480c-812d-8969cfd06f68single-post-img.jpg">
+      <publishTime>10/03/2019 22:50:23</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/34f64e70-4c5b-4a10-b629-5d3da7a07e2dreservation-banner.png">
+      <publishTime>10/05/2019 13:33:40</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/42d7e1b4-d852-497b-a73a-436c81010302single-post-img-2.jpg">
+      <publishTime>10/03/2019 23:20:34</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/4e98360a-d668-4dcc-bdf8-c0edd8f1cf1fsingle-post-img.jpg">
+      <publishTime>10/14/2019 12:47:11</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/5b26378b-26ce-41c4-a241-02d7ae44ebb3post-item-1.jpg">
+      <publishTime>10/04/2019 00:49:45</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/5df8322e-3379-4779-8734-506ba1164d4bsingle-post-img.jpg">
+      <publishTime>10/03/2019 22:42:49</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/6ffb089c-2e6b-46a5-97c9-6151677e486asingle-post-img.jpg">
+      <publishTime>10/03/2019 22:50:02</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/76e6c9f2-9a1e-4a97-aa8d-b79d5fea784csingle-post-img.jpg">
+      <publishTime>10/03/2019 23:20:34</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/8337d561-73c6-437e-bce8-f6105feb46ff6936266-2013-bmw-s1000rr.jpg">
+      <publishTime>10/11/2019 01:24:59</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/8a98b580-6db0-436d-9a04-ba61fd2d09eeabout-bg-1.jpg">
+      <publishTime>10/11/2019 01:24:59</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/a0598c55-b13e-4535-929f-8de54002bcb4banner-11.jpg">
+      <publishTime>10/14/2019 12:45:11</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/a147cbc4-81e1-4b9c-845a-7740bf91ab74single-post-img.jpg">
+      <publishTime>10/05/2019 13:33:40</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/b0ddd3d0-e3ba-448e-a5a5-fc3126ab268asingle-post-img-2.jpg">
+      <publishTime>10/04/2019 00:47:58</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/b58f8745-889b-4ef9-8a99-fbab72ca8056about-img.jpg">
+      <publishTime>10/11/2019 01:24:59</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/baf13230-28e1-4f8b-b4ce-fbb3524c7fe9chatBG.jpg">
+      <publishTime>10/11/2019 01:24:59</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/c18ca7d7-690a-43d8-8292-1aaedaeed910single-post-img-3.jpg">
+      <publishTime>10/03/2019 23:20:34</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/c5f0958d-d936-42a7-a8b8-c5b4cdb395e9single-post-img-2.jpg">
+      <publishTime>10/14/2019 12:53:02</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/dc64cdee-4084-4be5-b0d7-37d43933d953premium.png">
+      <publishTime>10/05/2019 13:33:40</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/eb087345-3391-4da1-b26a-cb4e922ef6f0single-post-img-2.jpg">
+      <publishTime>10/03/2019 22:50:23</publishTime>
+    </File>
+    <File Include="wwwroot/img/advertisements/eb5f10ee-e84f-47d2-8c81-70582ffc358ftg24_gallery_gt413.jpg">
+      <publishTime>10/04/2019 00:47:58</publishTime>
+    </File>
+    <File Include="wwwroot/img/ajaxSpinner.gif">
+      <publishTime>10/19/2019 01:36:03</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/10120e87-d0f2-4359-b58d-8fc8c796c8f0fiva2.jpg">
+      <publishTime>10/19/2019 23:00:05</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/1bf73c39-871c-409d-bc49-67ee612e0a75mazda_mazda_3.jpg">
+      <publishTime>10/19/2019 22:57:30</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/2e195a5d-2072-4088-b678-8d09d21a86812-audi-e-tron-2019-lt-hero-side.jpg">
+      <publishTime>10/19/2019 22:56:37</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/40917953-d980-4fbc-b9d7-a98ae21ea1f35da9a0460ee694b7313493cf.jpg">
+      <publishTime>10/19/2019 22:54:41</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/6c30080c-b4bf-44d1-b058-422dc34fbe99vauxhall-corsa-e-4509e_0.jpg">
+      <publishTime>10/19/2019 22:59:08</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/841f86bb-1804-4f5f-9efc-95be791860d44-audi-e-tron-2019-lt-front-end.jpg">
+      <publishTime>10/19/2019 22:56:37</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/8729ec74-6b37-4c59-b20f-f531bc1065cfcorsa_vxr_2019_render_0.jpg">
+      <publishTime>10/19/2019 22:59:08</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/a96e0c5a-1ee0-4a97-a101-673054217a523-audi-e-tron-2019-lt-hero-rear.jpg">
+      <publishTime>10/19/2019 22:56:37</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/aaf64e76-e2f7-4e5b-a656-2b0eee2c5596_sb10828.jpg">
+      <publishTime>10/19/2019 22:54:41</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/c402da39-9c04-48ee-b31e-170aba6fd6d31-audi-e-tron-2019-lt-hero-front_0.jpg">
+      <publishTime>10/19/2019 22:56:37</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/ea6345cf-5a46-46b2-9fc0-894b52359e54fiva4.jpg">
+      <publishTime>10/19/2019 23:00:05</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/f4b191e4-402d-4478-84c2-f0cfe8286bacfiva3.jpg">
+      <publishTime>10/19/2019 23:00:05</publishTime>
+    </File>
+    <File Include="wwwroot/img/blogs/fc12c212-23bc-4687-a978-e120df03d2b2aston_martin_dbx_saddle_bag.jpg">
+      <publishTime>10/19/2019 22:54:41</publishTime>
+    </File>
+    <File Include="wwwroot/img/cars_bg.jpg">
+      <publishTime>08/24/2019 20:04:30</publishTime>
+    </File>
+    <File Include="wwwroot/img/economy.png">
+      <publishTime>08/25/2019 23:59:08</publishTime>
+    </File>
+    <File Include="wwwroot/img/logo.svg">
+      <publishTime>08/03/2019 14:06:43</publishTime>
+    </File>
+    <File Include="wwwroot/img/preloader.gif">
+      <publishTime>10/19/2019 01:36:34</publishTime>
+    </File>
+    <File Include="wwwroot/img/premium.png">
+      <publishTime>08/26/2019 23:42:07</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/01c6f0d3-a5a9-4b65-b0ab-9bbd7ab30f001016-hero.jpg">
+      <publishTime>10/17/2019 18:35:31</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/02962e2b-fe78-4dbd-813e-f409222be1e0car-features.jpg">
+      <publishTime>10/17/2019 18:33:44</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/275d8c0f-e487-4989-ba17-d8834f5a9caeblog-header-design.jpg">
+      <publishTime>10/20/2019 16:52:10</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/327e486c-52d9-4d03-bdc9-2c190e2fbd5bhandshakejpg.jpg">
+      <publishTime>10/17/2019 18:35:18</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/79183eb6-3b5e-4301-b121-c7ccfd1fb0b3banner2.jpg">
+      <publishTime>10/17/2019 18:32:54</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/819b9603-35e5-489c-8605-22b6f5be98dcBlog-Banner.png">
+      <publishTime>10/17/2019 18:32:42</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/a9be319b-fc7d-46be-9c72-6b7b103244c4About-Us-Banner.png">
+      <publishTime>10/17/2019 18:32:17</publishTime>
+    </File>
+    <File Include="wwwroot/img/SectionBanners/d4de7df2-a9a6-441b-9fcb-6647de09b1f1carsBanner.jpg">
+      <publishTime>10/17/2019 18:46:58</publishTime>
+    </File>
+    <File Include="wwwroot/img/standart.png">
+      <publishTime>08/26/2019 00:01:24</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation-unobtrusive/.bower.json">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation-unobtrusive/LICENSE.txt">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation/.bower.json">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation/dist/additional-methods.js">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation/dist/additional-methods.min.js">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation/dist/jquery.validate.js">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation/dist/jquery.validate.min.js">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/jquery-validation/LICENSE.md">
+      <publishTime>09/27/2019 13:17:28</publishTime>
+    </File>
+    <File Include="wwwroot/js/main.js">
+      <publishTime>10/20/2019 12:55:00</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/css/black-dashboard.css">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/css/black-dashboard.css.map">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/css/black-dashboard.min.css">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/css/nucleo-icons.css">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/demo/demo.css">
+      <publishTime>10/09/2019 22:44:56</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/demo/demo.js">
+      <publishTime>10/19/2019 13:40:32</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/fonts/nucleo.eot">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/fonts/nucleo.ttf">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/fonts/nucleo.woff">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/fonts/nucleo.woff2">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/img/chatBG.jpg">
+      <publishTime>10/10/2019 22:58:48</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/black-dashboard.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/black-dashboard.js.map">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/black-dashboard.min.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/core/bootstrap.min.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/core/jquery.min.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/core/popper.min.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/plugins/bootstrap-notify.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/plugins/chartjs.min.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+    <File Include="wwwroot/User/assets/js/plugins/perfect-scrollbar.jquery.min.js">
+      <publishTime>07/08/2019 13:07:19</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

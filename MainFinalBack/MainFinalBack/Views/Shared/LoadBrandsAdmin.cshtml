@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Brand>
+@foreach (var brand in Model)
+{
+    <tr>
+        <td>@brand.Name</td>
+        <td>
+            <a asp-area="admin" asp-controller="Brands" asp-action="Edit" asp-route-id="@brand.Id" style="float:right">
+                <i class="fas fa-pen-square" style="font-size:40px"></i>
+            </a>
+        </td>
+    </tr>
+}

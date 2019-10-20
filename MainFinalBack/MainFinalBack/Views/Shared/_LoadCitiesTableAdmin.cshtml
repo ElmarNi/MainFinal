@@ -1,0 +1,30 @@
+﻿@model IEnumerable<City>
+@{
+    Layout = null;
+}
+<div id="loader" class="d-none justify-content-center">
+    <img src="~/img/ajaxSpinner.gif" style="height:50px;"/>
+</div>
+<table class="table w-100">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count(); i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model.ElementAt(i).Name</td>
+                <td>
+                    <a asp-area="Admin" asp-controller="Cities" asp-action="Edit" asp-route-id="@Model.ElementAt(i).Id" style="float:right">
+                        <i class="fas fa-pen-square" style="font-size:40px"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

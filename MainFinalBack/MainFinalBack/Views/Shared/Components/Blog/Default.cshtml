@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MainFinalBack.Models.Blog>
+
+@foreach (var blog in Model)
+{
+    <div class="news mb-3">
+        <div class="single-news d-flex">
+            <div class="image mr-2">
+                <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id"><img src="~/img/@blog.MainImageUrl"></a>
+            </div>
+            <div class="title">
+                <a asp-controller="Blog" asp-action="details" asp-route-id="@blog.Id" style="word-break:break-word">@blog.Header</a>
+                <p class="date">@blog.UpdatedDate.Day @blog.UpdatedDate.ToString("MMM"), @blog.UpdatedDate.Year</p>
+            </div>
+        </div>
+    </div>
+
+}

@@ -1,0 +1,49 @@
+﻿@model LoadModelsAdminVM
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">Admin</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Models</li>
+    </ol>
+</nav>
+<style>
+    option {
+        color: black
+    }
+</style>
+<div class="row" id="Models">
+    <div class="col-12 mb-3 form-group">
+        <div class="col-12">
+            <select id="selectModels" class="form-control" asp-items="@(new SelectList(ViewBag.Brands, "Id", "Name"))">
+                <option class=" text-dark" value="">Select Brand</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="col-12 table-responsive" id="Load">
+            <div id="loader" class="d-none justify-content-center">
+                <img src="~/img/ajaxSpinner.gif" style="height:50px;" />
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mt-3">
+        <form method="post" class="w-100 d-flex flex-wrap">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group col-6">
+                <label>Brand:</label>
+                <select class="form-control" asp-items="@(new SelectList(ViewBag.Brands, "Id", "Name"))" asp-for="Model.BrandId">
+                    <option class=" text-dark" value="">Select Brand</option>
+                </select>
+                <span asp-validation-for="Model.BrandId" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6">
+                <label>Model:</label>
+                <input class="form-control" asp-for="Model.Name" />
+                <span asp-validation-for=" Model.Name" class="text-danger"></span>
+            </div>
+            <input type="submit" class="mx-3 btn btn-block btn-success" value="Add" />
+        </form>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

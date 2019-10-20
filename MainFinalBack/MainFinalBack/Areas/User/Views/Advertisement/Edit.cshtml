@@ -1,0 +1,175 @@
+﻿@model Advertisement
+<style>
+    option{
+        color:black;
+    }
+    #choosePhoto{
+        display: block;
+        width: 100%;
+        height: 150px;
+        border: 1px dashed #6179ba;
+        background-color: #1d253b;
+        font-size: 40px;
+        color: white;
+    }
+</style>
+<div class="container" id="adEdit">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Advertisements</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data" class="w-100 d-flex flex-wrap my-3 position-relative">
+                <img src="~/img/@Model.Car.MainImageUrl" style="width:100%; height:auto; object-fit:cover" id="mainIMG" class="mb-3" />
+                <a class="btn btn-danger position-absolute remove-image" href="" title="Click for remove image">
+                    <i class="tim-icons icon-simple-remove"></i>
+                </a>
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group col-12 d-none">
+                    <label asp-for="@Model.Car.Photo"></label>
+                    <input class="form-control col-12" asp-for="@Model.Car.Photo" />
+                    <button id="choosePhoto">
+                        <i class="tim-icons icon-simple-add"></i>
+                    </button>
+                </div>
+                <span asp-validation-for="@Model.Car.Photo" class="text-danger"></span>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Model.Brand"></label>
+                    <select id="brands" class="form-control" asp-items="@(new SelectList(ViewBag.Brands, "Id", "Name"))">
+                        <option value="">Select Brand</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.Model.BrandId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Model"></label>
+                    <select id="models" class="form-control" asp-for="@Model.Car.ModelId">
+                        <option value="">Select Model</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.ModelId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.City.Country"></label>
+                    <select id="countries" class="form-control" asp-items="@(new SelectList(ViewBag.Countries, "Id", "Name"))">
+                        <option value="">Select Country</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.City.Country" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.City"></label>
+                    <select id="cities" class="form-control" asp-for="@Model.Car.CityId">
+                        <option value="">Select City</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.CityId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.CarClass"></label>
+                    <select id="category" class="form-control" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))" asp-for="@Model.Car.CarClassId">
+                        <option value="">Select Category</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.CarClassId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.BodyType"></label>
+                    <select id="bodytypes" class="form-control" asp-items="@(new SelectList(ViewBag.BodyTypes, "Id", "Body"))" asp-for="@Model.Car.BodyTypeId">
+                        <option value="">Select Body type</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.BodyTypeId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Transmission"></label>
+                    <select id="transmissions" class="form-control" asp-items="@(new SelectList(ViewBag.Transmissons, "Id", "Name"))" asp-for="@Model.Car.TransmissionId">
+                        <option value="">Select Transmission</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.TransmissionId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.FuelType"></label>
+                    <select id="fueltypes" class="form-control" asp-items="@(new SelectList(ViewBag.FuelTypes, "Id", "Fuel"))" asp-for="@Model.Car.FuelTypeId">
+                        <option value="">Select Fuel Type</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.FuelTypeId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Color"></label>
+                    <select id="colors" class="form-control" asp-items="@(new SelectList(ViewBag.Colors, "Id", "Name"))" asp-for="@Model.Car.ColorId">
+                        <option value="">Select Color</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.ColorId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.WheelDrive"></label>
+                    <select id="wheeldrives" class="form-control" asp-items="@(new SelectList(ViewBag.WheelDrives, "Id", "Drive"))" asp-for="@Model.Car.WheelDriveId">
+                        <option value="">Select Wheel Drive</option>
+                    </select>
+                    <span asp-validation-for="@Model.Car.WheelDriveId" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Engine"></label>
+                    <input class="form-control" asp-for="@Model.Car.Engine" />
+                    <span asp-validation-for="@Model.Car.Engine" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Milage"></label>
+                    <input class="form-control" asp-for="@Model.Car.Milage" />
+                    <span asp-validation-for="@Model.Car.Milage" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.ManufactureYear"></label>
+                    <input class="form-control" asp-for="@Model.Car.ManufactureYear" />
+                    <span asp-validation-for="@Model.Car.ManufactureYear" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.Price"></label>
+                    <input class="form-control" asp-for="@Model.Car.Price" />
+                    <span asp-validation-for="@Model.Car.Price" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="@Model.Car.IsVip"></label>
+                    <input class="form-control" asp-for="@Model.Car.IsVip" />
+                    <span asp-validation-for="@Model.Car.IsVip" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12">
+                    <label asp-for="@Model.Car.Description"></label>
+                    <input class="form-control" asp-for="@Model.Car.Description" />
+                    <span asp-validation-for="@Model.Car.Description" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12 d-flex flex-wrap align-items-center" id="detailImages">
+                    @if (Model.Car.CarDetailImages != null)
+                    {
+                        @foreach (var img in Model.Car.CarDetailImages)
+                        {
+                            <div class="detail-image-single">
+                                <img src="~/img/@img.ImageUrl" title="Click for delete this image" style="cursor:pointer" />
+                                <div class="delete-buttons h-100 align-items-center justify-content-center d-none">
+                                    <a class="btn btn-danger mr-1 text-center" id="confirmDelete" data-id="@img.Id" href="" title="Click for delete">
+                                        <i class="tim-icons icon-check-2"></i>
+                                    </a>
+                                    <a class="btn btn-warning ml-1 text-center" href="" id="cancel" title="Click for cancel">
+                                        <i class="tim-icons icon-simple-remove"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    }
+                    <div id="add-photo" class="position-relative detail-image-single">
+                        <input asp-for="@Model.Car.DetailPhotos" />
+                        <button id="add-photo-btn">
+                            <i class="tim-icons icon-simple-add"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="@Model.Car.DetailPhotos" class="text-danger"></span>
+                </div>
+                <input type="submit" class="btn btn-block btn-success mx-3" value="Update" />
+            </form>
+
+        </div>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

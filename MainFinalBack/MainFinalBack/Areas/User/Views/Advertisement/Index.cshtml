@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Advertisement>
+
+
+<style>
+    table div:not(.delete-buttons) {
+        display: none !important;
+    }
+
+    img {
+        width: 150px !important;
+        max-width: unset;
+    }
+</style>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Dashboard">User</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Advertisements</li>
+    </ol>
+</nav>
+<div class="container ">
+
+    <a class="btn btn-primary btn-block my-3" asp-action="Create">Create</a>
+    <div class="table-responsive">
+        <table class="table" id="ads">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Verified</th>
+                    <th>Place</th>
+                    <th>Updated date</th>
+                    <th>Price</th>
+                    <th>Is VIP?</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ad in Model.Where(ad => ad.ApplicationUser.UserName == User.Identity.Name).OrderByDescending(ad => ad.UpdatedDate))
+                {
+                    <tr>
+                        <td>
+                            <img src="~/img/@ad.Car.MainImageUrl" />
+                        </td>
+
+                        <td>@ad.Car.Model.Brand.Name</td>
+
+                        <td>@ad.Car.Model.Name</td>
+
+                        <td>
+                            @if (ad.IsVerified)
+                            {
+                                <span>Yes</span>
+                            }
+                            else
+                            {
+                                <span>No</span>
+                            }
+                        </td>
+
+                        <td>@ad.Car.City.Country.Name, @ad.Car.City.Name</td>
+
+                        <td>@ad.UpdatedDate.Day/@ad.UpdatedDate.Month/@ad.UpdatedDate.Year</td>
+
+                        <td>@ad.Car.Price $</td>
+
+                        <td>
+                            @if (ad.Car.IsVip)
+                            {
+                                <span>Yes</span>
+                            }
+                            else
+                            {
+                                <span>No</span>
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-info btn-block text-center" style="width:200px" asp-area="" asp-controller="Cars" asp-action="Details" asp-route-id="@ad.Id">Details</a>
+                            <a class="btn btn-warning my-2 btn-block text-center" style="width:200px" asp-action="Edit" asp-route-id="@ad.Id">Edit</a>
+                            <a class="btn btn-danger btn-block text-center" href="" style="width:200px" id="delete">Delete</a>
+                            <div class="delete-buttons justify-content-between mt-2 d-none" style="width:200px">
+                                <a class="btn btn-danger mr-1 text-center" asp-action="Delete" asp-route-id="@ad.Id">
+                                    <i class="tim-icons icon-check-2"></i>
+                                </a>
+                                <a class="btn btn-warning ml-1 text-center" href="" id="cancel">
+                                    <i class="tim-icons icon-simple-remove"></i>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

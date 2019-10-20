@@ -1,0 +1,71 @@
+﻿@model Blog
+<style>
+    option {
+        color: black;
+    }
+
+    #choosePhoto {
+        display: block;
+        width: 100%;
+        height: 150px;
+        border: 1px dashed #6179ba;
+        background-color: #1d253b;
+        font-size: 40px;
+        color: white;
+    }
+</style>
+<div class="container" id="blogCreate">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="index">Dashboard</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index">Blog</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Create</li>
+        </ol>
+    </nav>
+    <div class="row">
+        <div class="col-12">
+            <form method="post" enctype="multipart/form-data" class="w-100 d-flex flex-wrap my-3 position-relative">
+                <img src="" style="width:100%; height:auto; max-height:600px; object-fit:cover" id="mainIMG" class="mb-3 d-none" />
+                <a class="btn btn-danger position-absolute remove-image d-none" href="" title="Click for remove image">
+                    <i class="tim-icons icon-simple-remove"></i>
+                </a>
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group col-12 mb-3">
+                    <label asp-for="MainPhoto"></label>
+                    <input class="form-control col-12" asp-for="MainPhoto" />
+                    <button id="choosePhoto">
+                        <i class="tim-icons icon-simple-add"></i>
+                    </button>
+                </div>
+                <div class="col-12">
+                    <span asp-validation-for="MainPhoto" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Header"></label>
+                    <input class="form-control" asp-for="Header" />
+                    <span asp-validation-for="Header" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Content"></label>
+                    <input class="form-control" asp-for="Content" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group col-12 d-flex flex-wrap align-items-center mt-3" id="detailImages">
+                    <div id="add-photo" class="position-relative detail-image-single">
+                        <input asp-for="DetailPhotos" />
+                        <button id="add-photo-btn">
+                            <i class="tim-icons icon-simple-add"></i>
+                        </button>
+                    </div>
+                    <span asp-validation-for="DetailPhotos" class="text-danger"></span>
+                </div>
+                <input type="submit" class="btn btn-block btn-success mx-3" value="Update" />
+            </form>
+
+        </div>
+        @section Scripts{
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SectionBanner>
+
+
+<style>
+    table img {
+        width: 300px !important;
+        object-fit: cover;
+        height: 150px;
+        max-width: unset;
+    }
+</style>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Section Banners</li>
+        </ol>
+    </nav>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Section</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var banner in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="~/img/@banner.ImageUrl" />
+                        </td>
+                        <td>@banner.SectionName</td>
+                        <td class="text-right">
+                            <a class="btn btn-warning" style="width:200px" asp-action="Edit" asp-route-id="@banner.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

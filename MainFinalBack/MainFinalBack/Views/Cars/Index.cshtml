@@ -1,0 +1,139 @@
+﻿@model IEnumerable<Advertisement>
+
+<section id="sub-banner" style="background-image: url(img/@ViewBag.Banner)">
+    <div class="sub-banner">
+        <div class="breadcrumb-areas">
+            <h1>Car List</h1>
+            <ul class="breadcrumbs">
+                <li><a href="/">Home</a></li>
+                <li class="active">Cars</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="cars">
+    <div class="container">
+        <div class="row car-search-items mb-4">
+            <!-- brand and model -->
+            <div class="car-search-item col-md-4 col-sm-6 mb-3">
+                <div class="car-brand">
+                    <label for="">Brand: </label>
+                    <select name="" id="brands" class="form-control" asp-items="@(new SelectList(ViewBag.Brands, "Id", "Name"))">
+                        <option value="">Select Brand</option>
+                    </select>
+                </div>
+            </div>
+            <div class="car-search-item col-md-4 col-sm-6 mb-3">
+                <div class="car-model">
+                    <label for="">Model: </label>
+                    <select name="" id="models" class="form-control">
+                        <option value="">Select Model</option>
+                    </select>
+                </div>
+            </div>
+            <!-- car categories: econom standart premium -->
+            <div class="car-search-item col-md-4 mb-3">
+                <div class="car-category">
+                    <label for="">Categories: </label>
+                    <select name="" id="categories" class="form-control" asp-items="@(new SelectList(ViewBag.CarClases, "Id", "Name"))">
+                        <option value="">Select Category</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Country -->
+            <div class="car-search-item col-sm-6 mb-3">
+                <div class="car-country">
+                    <label for="">Country: </label>
+                    <select class="form-control" id="countries" asp-items="@(new SelectList(ViewBag.Countries, "Id", "Name"))">
+                        <option value="">Select Country</option>
+                    </select>
+                </div>
+            </div>
+            <!-- City -->
+            <div class="car-search-item col-sm-6 mb-3">
+                <div class="car-city">
+                    <label for="">City: </label>
+                    <select name="" id="cities" class="form-control">
+                        <option value="">Select City</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row car-list">
+            <input type="hidden" value="@Model.Count()" id="takenCars" />
+            @foreach (var ad in Model)
+            {
+                if (ad.IsVerified)
+                {
+                    <div class="col-12">
+                        <div class="car-list-item">
+                            <div class="image">
+                                <a asp-action="details" asp-route-id="@ad.Id">
+                                    <img src="~/img/@ad.Car.MainImageUrl">
+                                </a>
+                            </div>
+                            <div class="car-details">
+                                <h2 class="mb-2">
+                                    <a asp-action="details" asp-route-id="@ad.Id">@ad.Car.Model.Brand.Name, @ad.Car.Model.Name</a>
+                                </h2>
+                                <div class="reviews">
+                                    <a>@ad.UpdatedDate.Day, @ad.UpdatedDate.ToString("MMMM"), @ad.UpdatedDate.Year</a>
+                                </div>
+                                <div class="about-car my-2">
+                                    <span>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        @ad.Car.City.Country.Name, @ad.Car.City.Name
+                                    </span>
+                                    <span>
+                                        <i class="fas fa-cogs"></i>
+                                        @ad.Car.Transmission.Name
+                                    </span>
+
+                                    @if (ad.Car.IsVip)
+                                    {
+                                        <span>
+                                            <i class="fas fa-gem"></i>
+                                            VIP
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span>
+                                            <i class="far fa-calendar-times"></i>
+                                            @ad.Car.ManufactureYear
+                                        </span>
+                                    }
+                                    <span>
+                                        <i class="fa fa-list-alt"></i>
+                                        @ad.Car.CarClass.Name
+                                    </span>
+                                </div>
+                                <div class="more">
+                                    <a asp-action="details" asp-route-id="@ad.Id">More information</a>
+                                </div>
+                            </div>
+                            <div class="booking">
+                                <div class="price">
+                                    <span>$@ad.Car.Price</span>/day
+                                </div>
+                                <a asp-action="Book" asp-route-id="@ad.Id" class="btn btn-lg w-100 custom-bg-green-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        @if (ViewBag.CarCount > Model.Count())
+        {
+            <div class="row load-more">
+                <div class="col-12 text-center">
+                    <a href="" class="btn">Load More</a>
+                </div>
+            </div>
+        }
+        <div id="loader" class="d-none justify-content-center">
+            <img src="~/img/ajaxSpinner.gif" style="height:50px;" />
+        </div>
+    </div>
+</section>

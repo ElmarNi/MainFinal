@@ -1,0 +1,77 @@
+﻿@model IEnumerable<TermHeader>
+
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-controller="Dashboard">Moderator</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Terms</li>
+            </ol>
+        </nav>
+        <div class="row mb-3">
+            <div class="col-6">
+                <a class="btn btn-block btn-info" asp-action="CreateHeader">Create Header</a>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-block btn-info" asp-action="CreateContent">Create Content</a>
+            </div>
+        </div>
+        <div class="table-responsive" id="terms">
+            @foreach (var header in Model)
+            {
+                <div class="header-wrapper d-flex justify-content-between">
+                    <h4>@header.Header</h4>
+                    <div class="d-flex justify-content-between">
+                        <a class="btn btn-warning mr-2" asp-action="EditHeader" asp-route-id="@header.Id" style="height:fit-content">Edit Header</a>
+                        @if (Model.Count() > 1)
+                        {
+                            <a class="btn btn-primary ml-2" id="delete" href="" style="height:fit-content">Delete Header</a>
+                        }
+                        <div class="delete-buttons justify-content-between d-none">
+                            <a class="btn btn-danger mr-1 text-center mr-2" asp-action="DeleteHeader" asp-route-id="@header.Id" style="height:fit-content">
+                                <i class="tim-icons icon-check-2"></i>
+                            </a>
+                            <a class="btn btn-warning ml-1 text-center ml-2" href="" id="cancel" style="height:fit-content">
+                                <i class="tim-icons icon-simple-remove"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var content in header.TermContents)
+                        {
+
+                            <tr>
+                                <td>@header.Id.@content.Id</td>
+                                <td>@content.Content</td>
+                                <td class="w-25">
+                                    <a class="btn btn-warning btn-block mb-1" asp-action="EditContent" asp-route-id="@content.Id">Edit</a>
+                                    @if (header.TermContents.Count() > 1)
+                                    {
+                                        <a class="btn btn-danger btn-block mt-2" id="delete" href="">Delete</a>
+                                        <div class="delete-buttons justify-content-between mt-2 d-none">
+                                            <a class="btn btn-danger mr-1 text-center w-50 mr-2" asp-action="DeleteContent" asp-route-id="@content.Id">
+                                                <i class="tim-icons icon-check-2"></i>
+                                            </a>
+                                            <a class="btn btn-warning ml-1 text-center w-50 ml-2" href="" id="cancel">
+                                                <i class="tim-icons icon-simple-remove"></i>
+                                            </a>
+                                        </div>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            }
+        </div>
+    </div>

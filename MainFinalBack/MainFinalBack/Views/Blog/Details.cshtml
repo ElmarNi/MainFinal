@@ -1,0 +1,51 @@
+﻿@model BlogDetailsVM
+
+<section id="sub-banner" style="background-image: url(/img/@ViewBag.Banner)">
+    <div class="sub-banner">
+        <div class="breadcrumb-areas">
+            <h1>Blog</h1>
+            <ul class="breadcrumbs">
+                <li><a asp-controller="Home" asp-action="index">Home</a></li>
+                <li class="active"><a asp-action="index">All blogs</a></li>
+                <li class="active">Blog details</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="post">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 p-md-0 mb-3">
+                <h3 class="text-center mb-3" style="word-break:break-word">@Model.Blog.Header</h3>
+                <img src="~/img/@Model.Blog.MainImageUrl" class="mb-3" style="width:100%; height:auto; object-fit:cover"/>
+                <p style="word-break:break-word">@Model.Blog.Content</p>  
+                <div class="detail-gallery mt-4">
+                    @foreach (var image in Model.BlogDetailImages)
+                    {
+                        <a href="~/img/@image.ImageUrl" data-toggle="lightbox" data-gallery="gallery"
+                           class="col-3 p-0">
+                            <img src="~/img/@image.ImageUrl" title="Click for full size" class="img-fluid">
+                            <i class="fas fa-search-plus"></i>
+                        </a>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="recent-news">
+                    <h3 class="recent-news-h3">Recent news</h3>
+                    @await Component.InvokeAsync("Blog")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@* Gallery *@
+@section Scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+}
+@section Css{ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+}
