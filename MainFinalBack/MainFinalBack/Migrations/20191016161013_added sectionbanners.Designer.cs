@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191016161013_added sectionbanners")]
-    partial class addedsectionbanners
+    partial class addedSectionbanners
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

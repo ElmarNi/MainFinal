@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20190927104151_fixed name of apllicationuser")]
-    partial class fixednameofapllicationuser
+    partial class fixedNameofapllicationuser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

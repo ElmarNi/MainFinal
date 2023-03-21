@@ -2,7 +2,7 @@
 
 namespace MainFinalBack.Migrations
 {
-    public partial class addedourpassionsectionbannercolumn : Migration
+    public partial class addedOurpassionsectionbannercolumn : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

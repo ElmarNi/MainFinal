@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191016141319_added our passion section banner column")]
-    partial class addedourpassionsectionbannercolumn
+    partial class addedOurpassionsectionbannercolumn
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

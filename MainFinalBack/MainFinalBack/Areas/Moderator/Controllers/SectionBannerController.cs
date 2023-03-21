@@ -14,9 +14,9 @@ namespace MainFinalBack.Areas.Moderator.Controllers
     public class SectionBannerController : Controller
     {
         private readonly RentNowDbContext _context;
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
 
-        public SectionBannerController(RentNowDbContext context, IHostingEnvironment env)
+        public SectionBannerController(RentNowDbContext context, IWebHostEnvironment env)
         {
             _env = env;
             _context = context;

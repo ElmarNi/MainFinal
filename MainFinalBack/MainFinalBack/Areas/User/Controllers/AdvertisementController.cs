@@ -18,9 +18,9 @@ namespace MainFinalBack.Areas.User.Controllers
     {
         private readonly RentNowDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
 
-        public AdvertisementController(UserManager<ApplicationUser> userManager, RentNowDbContext context, IHostingEnvironment environment)
+        public AdvertisementController(UserManager<ApplicationUser> userManager, RentNowDbContext context, IWebHostEnvironment environment)
         {
             _context = context;
             _userManager = userManager;

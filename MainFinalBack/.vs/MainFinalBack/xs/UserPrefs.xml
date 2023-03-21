@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{B4780E81-2F48-426C-A8F4-8B3DE7986FAE}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MainFinalBack PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MainFinalBack/Program.cs">
+    <Files>
+      <File FileName="MainFinalBack/appsettings.json" Line="12" Column="1" />
+      <File FileName="../../Egmedia_back/EGmediaBack/appsettings.json" Line="9" Column="26" />
+      <File FileName="MainFinalBack/Program.cs" Line="33" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MainFinalBack" expanded="True">
+            <Node name="MainFinalBack" expanded="True">
+              <Node name="Areas" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

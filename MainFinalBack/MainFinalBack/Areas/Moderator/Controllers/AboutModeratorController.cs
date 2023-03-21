@@ -15,8 +15,8 @@ namespace MainFinalBack.Areas.Moderator.Controllers
     public class AboutModeratorController : Controller
     {
         private readonly RentNowDbContext _context;
-        private readonly IHostingEnvironment _env;
-        public AboutModeratorController(RentNowDbContext context, IHostingEnvironment env)
+        private readonly IWebHostEnvironment _env;
+        public AboutModeratorController(RentNowDbContext context, IWebHostEnvironment env)
         {
             _context = context;
             _env = env;

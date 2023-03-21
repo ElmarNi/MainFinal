@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MainFinalBack.Migrations
 {
-    public partial class addedordermessages : Migration
+    public partial class addedOrdermessages : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

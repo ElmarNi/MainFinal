@@ -1,0 +1,389 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/ErrorPage/css/style.css",
+      "PackagePath": "staticwebassets/ErrorPage/css/style.css"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/ErrorPage/img/bg.jpg",
+      "PackagePath": "staticwebassets/ErrorPage/img/bg.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/css/black-dashboard.css",
+      "PackagePath": "staticwebassets/User/assets/css/black-dashboard.css"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/css/black-dashboard.css.map",
+      "PackagePath": "staticwebassets/User/assets/css/black-dashboard.css.map"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/css/black-dashboard.min.css",
+      "PackagePath": "staticwebassets/User/assets/css/black-dashboard.min.css"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/css/nucleo-icons.css",
+      "PackagePath": "staticwebassets/User/assets/css/nucleo-icons.css"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/demo/demo.css",
+      "PackagePath": "staticwebassets/User/assets/demo/demo.css"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/demo/demo.js",
+      "PackagePath": "staticwebassets/User/assets/demo/demo.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/fonts/nucleo.eot",
+      "PackagePath": "staticwebassets/User/assets/fonts/nucleo.eot"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/fonts/nucleo.ttf",
+      "PackagePath": "staticwebassets/User/assets/fonts/nucleo.ttf"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/fonts/nucleo.woff",
+      "PackagePath": "staticwebassets/User/assets/fonts/nucleo.woff"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/fonts/nucleo.woff2",
+      "PackagePath": "staticwebassets/User/assets/fonts/nucleo.woff2"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/img/chatBG.jpg",
+      "PackagePath": "staticwebassets/User/assets/img/chatBG.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/black-dashboard.js",
+      "PackagePath": "staticwebassets/User/assets/js/black-dashboard.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/black-dashboard.js.map",
+      "PackagePath": "staticwebassets/User/assets/js/black-dashboard.js.map"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/black-dashboard.min.js",
+      "PackagePath": "staticwebassets/User/assets/js/black-dashboard.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/core/bootstrap.min.js",
+      "PackagePath": "staticwebassets/User/assets/js/core/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/core/jquery.min.js",
+      "PackagePath": "staticwebassets/User/assets/js/core/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/core/popper.min.js",
+      "PackagePath": "staticwebassets/User/assets/js/core/popper.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/plugins/bootstrap-notify.js",
+      "PackagePath": "staticwebassets/User/assets/js/plugins/bootstrap-notify.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/plugins/chartjs.min.js",
+      "PackagePath": "staticwebassets/User/assets/js/plugins/chartjs.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/User/assets/js/plugins/perfect-scrollbar.jquery.min.js",
+      "PackagePath": "staticwebassets/User/assets/js/plugins/perfect-scrollbar.jquery.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/AboutUs/15e98739-9868-46a3-813b-c243d0ab084eabout-img.jpg",
+      "PackagePath": "staticwebassets/img/AboutUs/15e98739-9868-46a3-813b-c243d0ab084eabout-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/AboutUs/3152aeca-74d7-4b32-8e09-213a9e2a8aeaabout-bg-1.jpg",
+      "PackagePath": "staticwebassets/img/AboutUs/3152aeca-74d7-4b32-8e09-213a9e2a8aeaabout-bg-1.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/01c6f0d3-a5a9-4b65-b0ab-9bbd7ab30f001016-hero.jpg",
+      "PackagePath": "staticwebassets/img/SectionBanners/01c6f0d3-a5a9-4b65-b0ab-9bbd7ab30f001016-hero.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/02962e2b-fe78-4dbd-813e-f409222be1e0car-features.jpg",
+      "PackagePath": "staticwebassets/img/SectionBanners/02962e2b-fe78-4dbd-813e-f409222be1e0car-features.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/275d8c0f-e487-4989-ba17-d8834f5a9caeblog-header-design.jpg",
+      "PackagePath": "staticwebassets/img/SectionBanners/275d8c0f-e487-4989-ba17-d8834f5a9caeblog-header-design.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/327e486c-52d9-4d03-bdc9-2c190e2fbd5bhandshakejpg.jpg",
+      "PackagePath": "staticwebassets/img/SectionBanners/327e486c-52d9-4d03-bdc9-2c190e2fbd5bhandshakejpg.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/79183eb6-3b5e-4301-b121-c7ccfd1fb0b3banner2.jpg",
+      "PackagePath": "staticwebassets/img/SectionBanners/79183eb6-3b5e-4301-b121-c7ccfd1fb0b3banner2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/819b9603-35e5-489c-8605-22b6f5be98dcBlog-Banner.png",
+      "PackagePath": "staticwebassets/img/SectionBanners/819b9603-35e5-489c-8605-22b6f5be98dcBlog-Banner.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/a9be319b-fc7d-46be-9c72-6b7b103244c4About-Us-Banner.png",
+      "PackagePath": "staticwebassets/img/SectionBanners/a9be319b-fc7d-46be-9c72-6b7b103244c4About-Us-Banner.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/SectionBanners/d4de7df2-a9a6-441b-9fcb-6647de09b1f1carsBanner.jpg",
+      "PackagePath": "staticwebassets/img/SectionBanners/d4de7df2-a9a6-441b-9fcb-6647de09b1f1carsBanner.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/0aba8096-22ba-4055-bd11-240f7e7c0c89single-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/0aba8096-22ba-4055-bd11-240f7e7c0c89single-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/14f540ed-5102-4c42-864a-2fbe2716a664single-post-img-2.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/14f540ed-5102-4c42-864a-2fbe2716a664single-post-img-2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/167d05da-9ad5-49e1-baf3-4e88fb2065c9single-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/167d05da-9ad5-49e1-baf3-4e88fb2065c9single-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/1ef5f0f1-1431-4a60-93e4-71ab4cd7ba946936266-2013-bmw-s1000rr.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/1ef5f0f1-1431-4a60-93e4-71ab4cd7ba946936266-2013-bmw-s1000rr.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/20b2a62d-6913-4d99-a2ea-35b3bd177e75single-post-img-4.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/20b2a62d-6913-4d99-a2ea-35b3bd177e75single-post-img-4.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/2ac4700f-99fb-4dcc-82ef-e9109c7e34e0terms-banner.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/2ac4700f-99fb-4dcc-82ef-e9109c7e34e0terms-banner.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/2ea1b085-98e8-49bd-9a89-31690419acd4single-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/2ea1b085-98e8-49bd-9a89-31690419acd4single-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/30f9fe40-a690-480c-812d-8969cfd06f68single-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/30f9fe40-a690-480c-812d-8969cfd06f68single-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/34f64e70-4c5b-4a10-b629-5d3da7a07e2dreservation-banner.png",
+      "PackagePath": "staticwebassets/img/advertisements/34f64e70-4c5b-4a10-b629-5d3da7a07e2dreservation-banner.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/42d7e1b4-d852-497b-a73a-436c81010302single-post-img-2.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/42d7e1b4-d852-497b-a73a-436c81010302single-post-img-2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/4e98360a-d668-4dcc-bdf8-c0edd8f1cf1fsingle-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/4e98360a-d668-4dcc-bdf8-c0edd8f1cf1fsingle-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/5b26378b-26ce-41c4-a241-02d7ae44ebb3post-item-1.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/5b26378b-26ce-41c4-a241-02d7ae44ebb3post-item-1.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/5df8322e-3379-4779-8734-506ba1164d4bsingle-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/5df8322e-3379-4779-8734-506ba1164d4bsingle-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/6ffb089c-2e6b-46a5-97c9-6151677e486asingle-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/6ffb089c-2e6b-46a5-97c9-6151677e486asingle-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/76e6c9f2-9a1e-4a97-aa8d-b79d5fea784csingle-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/76e6c9f2-9a1e-4a97-aa8d-b79d5fea784csingle-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/8337d561-73c6-437e-bce8-f6105feb46ff6936266-2013-bmw-s1000rr.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/8337d561-73c6-437e-bce8-f6105feb46ff6936266-2013-bmw-s1000rr.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/8a98b580-6db0-436d-9a04-ba61fd2d09eeabout-bg-1.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/8a98b580-6db0-436d-9a04-ba61fd2d09eeabout-bg-1.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/a0598c55-b13e-4535-929f-8de54002bcb4banner-11.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/a0598c55-b13e-4535-929f-8de54002bcb4banner-11.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/a147cbc4-81e1-4b9c-845a-7740bf91ab74single-post-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/a147cbc4-81e1-4b9c-845a-7740bf91ab74single-post-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/b0ddd3d0-e3ba-448e-a5a5-fc3126ab268asingle-post-img-2.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/b0ddd3d0-e3ba-448e-a5a5-fc3126ab268asingle-post-img-2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/b58f8745-889b-4ef9-8a99-fbab72ca8056about-img.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/b58f8745-889b-4ef9-8a99-fbab72ca8056about-img.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/baf13230-28e1-4f8b-b4ce-fbb3524c7fe9chatBG.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/baf13230-28e1-4f8b-b4ce-fbb3524c7fe9chatBG.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/c18ca7d7-690a-43d8-8292-1aaedaeed910single-post-img-3.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/c18ca7d7-690a-43d8-8292-1aaedaeed910single-post-img-3.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/c5f0958d-d936-42a7-a8b8-c5b4cdb395e9single-post-img-2.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/c5f0958d-d936-42a7-a8b8-c5b4cdb395e9single-post-img-2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/dc64cdee-4084-4be5-b0d7-37d43933d953premium.png",
+      "PackagePath": "staticwebassets/img/advertisements/dc64cdee-4084-4be5-b0d7-37d43933d953premium.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/eb087345-3391-4da1-b26a-cb4e922ef6f0single-post-img-2.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/eb087345-3391-4da1-b26a-cb4e922ef6f0single-post-img-2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/advertisements/eb5f10ee-e84f-47d2-8c81-70582ffc358ftg24_gallery_gt413.jpg",
+      "PackagePath": "staticwebassets/img/advertisements/eb5f10ee-e84f-47d2-8c81-70582ffc358ftg24_gallery_gt413.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/ajaxSpinner.gif",
+      "PackagePath": "staticwebassets/img/ajaxSpinner.gif"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/10120e87-d0f2-4359-b58d-8fc8c796c8f0fiva2.jpg",
+      "PackagePath": "staticwebassets/img/blogs/10120e87-d0f2-4359-b58d-8fc8c796c8f0fiva2.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/1bf73c39-871c-409d-bc49-67ee612e0a75mazda_mazda_3.jpg",
+      "PackagePath": "staticwebassets/img/blogs/1bf73c39-871c-409d-bc49-67ee612e0a75mazda_mazda_3.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/2e195a5d-2072-4088-b678-8d09d21a86812-audi-e-tron-2019-lt-hero-side.jpg",
+      "PackagePath": "staticwebassets/img/blogs/2e195a5d-2072-4088-b678-8d09d21a86812-audi-e-tron-2019-lt-hero-side.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/40917953-d980-4fbc-b9d7-a98ae21ea1f35da9a0460ee694b7313493cf.jpg",
+      "PackagePath": "staticwebassets/img/blogs/40917953-d980-4fbc-b9d7-a98ae21ea1f35da9a0460ee694b7313493cf.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/6c30080c-b4bf-44d1-b058-422dc34fbe99vauxhall-corsa-e-4509e_0.jpg",
+      "PackagePath": "staticwebassets/img/blogs/6c30080c-b4bf-44d1-b058-422dc34fbe99vauxhall-corsa-e-4509e_0.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/841f86bb-1804-4f5f-9efc-95be791860d44-audi-e-tron-2019-lt-front-end.jpg",
+      "PackagePath": "staticwebassets/img/blogs/841f86bb-1804-4f5f-9efc-95be791860d44-audi-e-tron-2019-lt-front-end.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/8729ec74-6b37-4c59-b20f-f531bc1065cfcorsa_vxr_2019_render_0.jpg",
+      "PackagePath": "staticwebassets/img/blogs/8729ec74-6b37-4c59-b20f-f531bc1065cfcorsa_vxr_2019_render_0.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/a96e0c5a-1ee0-4a97-a101-673054217a523-audi-e-tron-2019-lt-hero-rear.jpg",
+      "PackagePath": "staticwebassets/img/blogs/a96e0c5a-1ee0-4a97-a101-673054217a523-audi-e-tron-2019-lt-hero-rear.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/aaf64e76-e2f7-4e5b-a656-2b0eee2c5596_sb10828.jpg",
+      "PackagePath": "staticwebassets/img/blogs/aaf64e76-e2f7-4e5b-a656-2b0eee2c5596_sb10828.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/c402da39-9c04-48ee-b31e-170aba6fd6d31-audi-e-tron-2019-lt-hero-front_0.jpg",
+      "PackagePath": "staticwebassets/img/blogs/c402da39-9c04-48ee-b31e-170aba6fd6d31-audi-e-tron-2019-lt-hero-front_0.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/ea6345cf-5a46-46b2-9fc0-894b52359e54fiva4.jpg",
+      "PackagePath": "staticwebassets/img/blogs/ea6345cf-5a46-46b2-9fc0-894b52359e54fiva4.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/f4b191e4-402d-4478-84c2-f0cfe8286bacfiva3.jpg",
+      "PackagePath": "staticwebassets/img/blogs/f4b191e4-402d-4478-84c2-f0cfe8286bacfiva3.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/blogs/fc12c212-23bc-4687-a978-e120df03d2b2aston_martin_dbx_saddle_bag.jpg",
+      "PackagePath": "staticwebassets/img/blogs/fc12c212-23bc-4687-a978-e120df03d2b2aston_martin_dbx_saddle_bag.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/cars_bg.jpg",
+      "PackagePath": "staticwebassets/img/cars_bg.jpg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/economy.png",
+      "PackagePath": "staticwebassets/img/economy.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/logo.svg",
+      "PackagePath": "staticwebassets/img/logo.svg"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/preloader.gif",
+      "PackagePath": "staticwebassets/img/preloader.gif"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/premium.png",
+      "PackagePath": "staticwebassets/img/premium.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/img/standart.png",
+      "PackagePath": "staticwebassets/img/standart.png"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation-unobtrusive/.bower.json",
+      "PackagePath": "staticwebassets/js/jquery-validation-unobtrusive/.bower.json"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/js/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/js/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation/.bower.json",
+      "PackagePath": "staticwebassets/js/jquery-validation/.bower.json"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/js/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/js/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/js/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/js/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/js/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ibrahimlien/Desktop/BackEnd/MainFinal/MainFinalBack/MainFinalBack/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.MainFinalBack.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.MainFinalBack.props",
+      "PackagePath": "build\\MainFinalBack.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.MainFinalBack.props",
+      "PackagePath": "buildMultiTargeting\\MainFinalBack.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.MainFinalBack.props",
+      "PackagePath": "buildTransitive\\MainFinalBack.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

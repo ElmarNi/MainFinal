@@ -15,10 +15,10 @@ namespace MainFinalBack.Controllers
     public class AjaxController : Controller
     {
         private readonly RentNowDbContext _context;
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
         private readonly UserManager<ApplicationUser> _userManager;
 
-        public AjaxController(RentNowDbContext context, IHostingEnvironment env, UserManager<ApplicationUser> userManager)
+        public AjaxController(RentNowDbContext context, IWebHostEnvironment env, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _env = env;

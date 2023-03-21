@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191011094502_deleted from column in chat")]
-    partial class deletedfromcolumninchat
+    partial class deletedFromcolumninchat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

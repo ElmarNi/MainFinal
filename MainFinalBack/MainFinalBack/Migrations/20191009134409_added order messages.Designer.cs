@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191009134409_added order messages")]
-    partial class addedordermessages
+    partial class addedOrdermessages
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

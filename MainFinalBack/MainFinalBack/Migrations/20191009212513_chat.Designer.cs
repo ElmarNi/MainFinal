@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191009212513_chat")]
-    partial class chat
+    partial class Chat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

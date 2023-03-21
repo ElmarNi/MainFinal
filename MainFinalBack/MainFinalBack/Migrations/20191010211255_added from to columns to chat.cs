@@ -2,7 +2,7 @@
 
 namespace MainFinalBack.Migrations
 {
-    public partial class addedfromtocolumnstochat : Migration
+    public partial class addedFromtocolumnstochat : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

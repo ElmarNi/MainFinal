@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191014132206_term added")]
-    partial class termadded
+    partial class termAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

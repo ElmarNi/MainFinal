@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MainFinalBack.Migrations
 {
-    public partial class addedsectionbanners : Migration
+    public partial class addedSectionbanners : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -2,7 +2,7 @@
 
 namespace MainFinalBack.Migrations
 {
-    public partial class deletedfromcolumninchat : Migration
+    public partial class deletedFromcolumninchat : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

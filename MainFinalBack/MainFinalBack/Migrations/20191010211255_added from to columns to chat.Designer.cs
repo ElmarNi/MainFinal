@@ -11,7 +11,7 @@ namespace MainFinalBack.Migrations
 {
     [DbContext(typeof(RentNowDbContext))]
     [Migration("20191010211255_added from to columns to chat")]
-    partial class addedfromtocolumnstochat
+    partial class addedFromtocolumnstochat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
